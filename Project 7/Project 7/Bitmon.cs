@@ -8,5 +8,13 @@ namespace Project_7
 {
     class Bitmon
     {
+        protected string nombre;
+        protected int hp;
+        protected int mp;
+        protected int ataque;
+        protected int defensa;
+        protected int velocidad;
+        protected string estado;
+        protected List<Ataques> ataques;
     }
 }
