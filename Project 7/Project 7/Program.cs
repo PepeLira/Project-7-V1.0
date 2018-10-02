@@ -10,7 +10,7 @@ namespace Project_7
     {
         static void Main(string[] args)
         {
-            //hello World!
+            Menu.PantallaInicio();
         }
     }
 }

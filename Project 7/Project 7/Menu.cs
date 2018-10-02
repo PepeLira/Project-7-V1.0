@@ -8,10 +8,15 @@ namespace Project_7
 {
     class Menu
     {
-        static void PantallaInicio()
+        public static void PantallaInicio()
         {
-            Console.WriteLine("Presione cualquier tecla para continuar");
-            Console.ReadKey();
+            Console.CursorLeft = (Console.WindowWidth /2 - "BOLLYWOOD SHOWDOWN".Length/2);
+            Console.CursorTop = (Console.WindowHeight / 4);
+            Console.Write("BOLLYWOOD SHOWDOWN");//titulo tentativo
+            Console.CursorLeft = (Console.WindowWidth /2 - "Presione cualquier tecla para continuar".Length/2);
+            Console.CursorTop = (Console.WindowHeight *3 / 4);
+            Console.Write("Presione cualquier tecla para continuar");
+            Console.ReadKey(true);
         }
 
         public static string PedirNombre()

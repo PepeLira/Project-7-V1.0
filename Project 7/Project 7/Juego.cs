@@ -12,6 +12,10 @@ namespace Project_7
         private Jugador jugador2;
         private List<Bitmon> bitmons;
 
+        public Juego()
+        {
+            //bitmons.Add(new Bitmon ...) para cada bitmon
+        }
         private void CrearJugadores()
         {
             Console.WriteLine("Jugador 1");
