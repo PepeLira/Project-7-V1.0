@@ -22,9 +22,9 @@ namespace Project_7
             BitmonActivo = bitmons[posicion];
         }
 
-        private void AgregarBitmon()
+        public void AgregarBitmon(int posicion, Bitmon bitmon)
         {
-
+            bitmons[posicion] = bitmon;
         }
     }
 }

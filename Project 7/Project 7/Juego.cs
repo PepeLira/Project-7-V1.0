@@ -10,14 +10,39 @@ namespace Project_7
     {
         private Jugador jugador1;
         private Jugador jugador2;
+        private List<Bitmon> bitmons;
 
-        private void CrearJugador1(string nombre)
+        private void CrearJugadores()
         {
-            jugador1 = new Jugador(nombre);
+            Console.WriteLine("Jugador 1");
+            string nombre1 = Menu.PedirNombre();
+            jugador1 = new Jugador(nombre1);
+            Console.WriteLine("Jugador 2");
+            string nombre2 = Menu.PedirNombre();
+            jugador2 = new Jugador(nombre2);
         }
-        private void CrearJugador2(string nombre)
+        private void DesplegarBitmons()
         {
-            jugador2 = new Jugador(nombre);
+            foreach (Bitmon bitmon in bitmons)
+            {
+                //Console.WriteLine(bitmon.getnombre());   hacer getters
+            }
         }
+        private void AsignarBitmons()
+        {
+            Console.WriteLine("Jugador 1");
+            jugador1.AgregarBitmon(0, bitmons[Menu.ElegirBitmon() - 1]);
+            Console.WriteLine("Jugador 2");
+            jugador2.AgregarBitmon(0, bitmons[Menu.ElegirBitmon() - 1]);
+            Console.WriteLine("Jugador 2");
+            jugador2.AgregarBitmon(1, bitmons[Menu.ElegirBitmon() - 1]);
+            Console.WriteLine("Jugador 1");
+            jugador1.AgregarBitmon(1, bitmons[Menu.ElegirBitmon() - 1]);
+            Console.WriteLine("Jugador 1");
+            jugador1.AgregarBitmon(2, bitmons[Menu.ElegirBitmon() - 1]);
+            Console.WriteLine("Jugador 2");
+            jugador2.AgregarBitmon(2, bitmons[Menu.ElegirBitmon() - 1]);
+        }
+
     }
 }
