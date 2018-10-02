@@ -15,6 +15,6 @@ namespace Project_7
         protected int defensa;
         protected int velocidad;
         protected string estado;
-        protected List<Ataques> ataques;
+        protected List<Ataque> ataques;
     }
 }
