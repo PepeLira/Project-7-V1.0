@@ -16,5 +16,14 @@ namespace Project_7
         protected int velocidad;
         protected string estado;
         protected List<Ataque> ataques;
+
+        void aplicarAtaque()// muchas opciones para hacerlo, podemos hacer que resiva el ataque elegido por el usuario 
+        {
+            
+        }
+        int atacar()
+        {
+            return 0;
+        }
     }
 }
