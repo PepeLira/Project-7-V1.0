@@ -10,20 +10,25 @@ namespace Project_7
     {
         protected string nombre;
         protected int hp;
-        protected int mp;
+        protected int Estamina;
         protected int ataque;
         protected int defensa;
         protected int velocidad;
         protected string estado;
         protected List<Ataque> ataques;
 
-        void aplicarAtaque()// muchas opciones para hacerlo, podemos hacer que resiva el ataque elegido por el usuario 
+        void recibirAtaque()// muchas opciones para hacerlo, podemos hacer que resiva el ataque elegido por el usuario 
         {
             
         }
-        int atacar()
+        int atacar(Ataque ataqueElegido)
         {
-            return 0;
+            return 0 ;
         }
+        void recuperarEstamina()
+        {
+
+        }
+
     }
 }
