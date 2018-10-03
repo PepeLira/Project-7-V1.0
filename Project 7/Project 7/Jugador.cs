@@ -8,6 +8,7 @@ namespace Project_7
 {
     class Jugador
     {
+        Consola consola = new Consola();
         public string nombre { get; }
         private Bitmon[] bitmons;
         private Bitmon BitmonActivo;
@@ -31,7 +32,7 @@ namespace Project_7
         {
             if(ordenRecibida == 0) //elegir ataque
             {
-                
+                Ataque ataqueElegido = consola.elegirAtaque(BitmonActivo.ataques); 
             }
             else if (ordenRecibida == 1) //descansar
             {
