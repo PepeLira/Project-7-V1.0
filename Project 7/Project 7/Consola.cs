@@ -68,9 +68,9 @@ namespace Project_7
         }
         public int elegirBitmon(Bitmon[] bitmons)
         {
-            for (int i = 1; i < ; i++)
+            for (int i = 0; i < bitmons.Length-1 ; i+=1)
             {
-                Console.WriteLine("Indice : [{0}]", cont);
+                Console.WriteLine("Numero Actor : [{0}]", i);
                 Console.WriteLine("Nombre Ataque: {0}", ataque.nombre);
                 Console.WriteLine("  ==========================================");
                 Console.WriteLine("  | Potencia | {0}", ataque.potencia);
