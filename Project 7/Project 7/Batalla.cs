@@ -45,11 +45,12 @@ namespace Project_7
                 }
                 else
                 {
+                    jugadorActivo.darUnaOrden(imputInt);
                     break;
                 }
             }
 
-            jugadorActivo.darUnaOrden();
+            
             
 
         }
