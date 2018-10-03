@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Actores\Brad Pitt.cs" />
+    <Compile Include="Actores\JackNicholson.cs" />
     <Compile Include="Actores\JimCarrey.cs" />
     <Compile Include="Actores\Johnny Deep.cs" />
     <Compile Include="Ataque.cs" />

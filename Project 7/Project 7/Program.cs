@@ -11,6 +11,7 @@ namespace Project_7
         static void Main(string[] args)
         {
             Menu.PantallaInicio();
+
         }
     }
 }
