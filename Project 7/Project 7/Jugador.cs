@@ -10,8 +10,10 @@ namespace Project_7
     {
         Consola consola = new Consola();
         public string nombre { get; }
-        private Bitmon[] bitmons;
+        private Bitmon[] bitmons = new Bitmon[3];
         private Bitmon BitmonActivo;
+        string jugadaTurno;
+        int ataqueElegido;
 
         public Jugador(string nombre)
         {
@@ -28,19 +30,21 @@ namespace Project_7
             bitmons[posicion] = bitmon;
         }
 
-        public void darUnaOrden(int ordenRecibida)
+        public void jugada(int ordenRecibida) // recibir la desicion tomada por el jugador por medio de la Consola
         {
             if(ordenRecibida == 0) //elegir ataque
             {
-                Ataque ataqueElegido = consola.elegirAtaque(BitmonActivo.ataques); 
+                jugadaTurno = "atacar";
+                ataqueElegido = consola.elegirAtaque(BitmonActivo.ataques); 
             }
             else if (ordenRecibida == 1) //descansar
             {
-                
+                jugadaTurno = "descasar";
             }
             else if (ordenRecibida == 2) //cambiar actor
             {
-
+                jugadaTurno = "cambiar actor";
+                CambiarBitmon(1);
             }
         }
     }

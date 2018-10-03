@@ -14,12 +14,12 @@ namespace Project_7
         Jugador jugadorGanador;
         
 
-        Jugador elegirJugadorInicial(Jugador jugador1, Jugador jugador2) //elegir el jugador inicial con un random de 0 a 90, 50/50 de proba
+        void elegirJugadorInicial(Jugador jugador1, Jugador jugador2) //elegir el jugador inicial con un random de 0 a 90, 50/50 de proba
         {
             Random rnd = new Random();
-            int selector = rnd.Next(0, 91);
+            int selector = rnd.Next(0, 101);
 
-            if (selector <= 45)
+            if (selector < 50)
             {
                 this.jugadorActivo = jugador1;
             }
@@ -27,22 +27,34 @@ namespace Project_7
             {
                 this.jugadorActivo = jugador2;
             }
-
-            return jugadorActivo;
         }
 
-        public void turno(string accion)
+        public void turno()
         {
-            jugadorActivo.darUnaOrden(consola.preguntarAccionTurno(jugadorActivo.nombre)); // Pregunta que accion tomara en su turno
+            jugadorActivo.jugada(consola.preguntarAccionTurno(jugadorActivo.nombre)); // Pregunta que accion tomara en su turno
 
+        }
+
+        void turnoDelSiguienteJugador(Jugador jugador1, Jugador jugador2)
+        {
+            if (jugadorActivo == jugador1) 
+            {
+                this.jugadorActivo = jugador2;
+            }
+            else
+            {
+                this.jugadorActivo = jugador1;
+            }
         }
 
         public Jugador iniciarBatalla(Jugador jugador1, Jugador jugador2)
         {
             elegirJugadorInicial(jugador1, jugador2);
 
-            while(finDePartida = false)
+            while(finDePartida == false)
             {
+                turno();
+                turnoDelSiguienteJugador(jugador1, jugador2);
 
             }
 

@@ -27,7 +27,7 @@ namespace Project_7
                 }
             }
         }
-        public Ataque elegirAtaque(List<Ataque> ataquesBitmonActivo)
+        public int elegirAtaque(List<Ataque> ataquesBitmonActivo)
         {
             int cont = 0;
             foreach (Ataque ataque in ataquesBitmonActivo)
@@ -61,10 +61,49 @@ namespace Project_7
                 }
                 else
                 {
-                    return (ataquesBitmonActivo[imputInt]);
+                    return (imputInt);
                     break;
                 }
             }
+        }
+        public int elegirBitmon(Bitmon[] bitmons)
+        {
+            for (int i = 1; i < ; i++)
+            {
+                Console.WriteLine("Indice : [{0}]", cont);
+                Console.WriteLine("Nombre Ataque: {0}", ataque.nombre);
+                Console.WriteLine("  ==========================================");
+                Console.WriteLine("  | Potencia | {0}", ataque.potencia);
+                Console.WriteLine("  ==========================================");
+                Console.WriteLine("  | Coste | {0}", ataque.coste);
+                Console.WriteLine("  ==========================================");
+                Console.WriteLine("  | Tipo | {0}", ataque.tipo);
+                Console.WriteLine("  ==========================================");
+                Console.WriteLine("  | Efecto1 | {0}", ataque.efecto1);
+                Console.WriteLine("  ==========================================");
+                Console.WriteLine("  | Efecto2 | {0}", ataque.efecto2);
+                Console.WriteLine("  ==========================================");
+                Console.WriteLine("  |Modificador de estado| {0}", ataque.estadoEfectuado);
+                Console.WriteLine("  ==========================================");
+                
+
+            }
+            while (true)
+            {
+                string imput = Console.ReadLine();
+                int imputInt;
+                if (!int.TryParse(imput, out imputInt))
+                {
+                    Console.WriteLine("{0} is not an integer", imput);
+                    // Whatever
+                }
+                else
+                {
+                    return (imputInt);
+                    break;
+                }
+            }
+            return 1;
         }
     }
 }

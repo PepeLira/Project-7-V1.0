@@ -18,17 +18,20 @@ namespace Project_7
         public string tipo { get; set; }
         public List<Ataque> ataques { get; set; }
 
+        // Pepecosas: necesitamos que Bitmon reciba una instrucción, la guarde y luego la ejecute cuando los dos jugadores hayan tomado sus desiciones.
+
         public void recibirAtaque()// muchas opciones para hacerlo, podemos hacer que resiva el ataque elegido por el usuario 
         {
             
         }
-        public int atacar(Ataque ataqueElegido)
+        public Ataque atacar(int ataqueElegido)
         {
-            return 0 ;
+            return ataques[ataqueElegido];
         }
-        public void recuperarEstamina()
-        {
-
+        public void descansar()//La acción de descansar no infringe daño al bitmon enemigo, pero aumenta la estamina del 
+        {                       //bitmon actual y además la defensa.
+            Estamina += 10;
+            defensa += 10;
         }
 
     }
