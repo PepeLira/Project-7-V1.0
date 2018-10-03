@@ -33,9 +33,21 @@ namespace Project_7
         public void turno(string accion)
         {
             Console.Write("Turno de {0}, desea:\n [0] Atacar\n [1] Descansar\n [2] Cambiar Actor\n", jugadorActivo.nombre);
-            string imput = Console.ReadLine();
-
-
+            
+            while (true)
+            {
+                string imput = Console.ReadLine();
+                int age;
+                if (!int.TryParse(imput, out age))
+                {
+                    Console.WriteLine("{0} is not an integer", imput);
+                    // Whatever
+                }
+                else
+                {
+                    break;
+                }
+            }
 
         }
 

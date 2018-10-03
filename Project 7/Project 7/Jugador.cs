@@ -29,10 +29,18 @@ namespace Project_7
 
         public void darUnaOrden(string ordenRecibida)
         {
-            if(ordenRecibida == "atacar")
+            if(ordenRecibida == "Atacar,")
             {
                 Console.WriteLine("Seleccione Ataque");
                 
+            }
+            else if (ordenRecibida == "Descansar")
+            {
+
+            }
+            else if (ordenRecibida == "Cambiar")
+            {
+
             }
         }
     }
