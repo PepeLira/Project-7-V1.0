@@ -46,10 +46,6 @@
     <Compile Include="Ataque.cs" />
     <Compile Include="Batalla.cs" />
     <Compile Include="Bitmon.cs" />
-    <Compile Include="Actores\Brad Pitt.cs" />
-    <Compile Include="Actores\Johnny Deep.cs" />
-    <Compile Include="Actores\JackNicholson.cs" />
-    <Compile Include="Actores\JimCarrey.cs" />
     <Compile Include="Juego.cs" />
     <Compile Include="Jugador.cs" />
     <Compile Include="Actores\Leonardo Dicaprio.cs" />
