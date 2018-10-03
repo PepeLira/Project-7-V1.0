@@ -9,7 +9,7 @@ namespace Project_7
     class Jugador
     {
         public string nombre { get; }
-        private List<Bitmon> bitmons;
+        private Bitmon[] bitmons;
         private Bitmon BitmonActivo;
 
         public Jugador(string nombre)

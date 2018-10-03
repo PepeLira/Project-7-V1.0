@@ -46,12 +46,21 @@
     <Compile Include="Ataque.cs" />
     <Compile Include="Batalla.cs" />
     <Compile Include="Bitmon.cs" />
-    <Compile Include="Consola.cs" />
+    <Compile Include="Actores\Brad Pitt.cs" />
+    <Compile Include="Actores\Johnny Deep.cs" />
+    <Compile Include="Actores\JackNicholson.cs" />
+    <Compile Include="Actores\JimCarrey.cs" />
     <Compile Include="Juego.cs" />
     <Compile Include="Jugador.cs" />
+    <Compile Include="Actores\Leonardo Dicaprio.cs" />
     <Compile Include="Menu.cs" />
+    <Compile Include="Actores\Natalie Portman.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Actores\Vin Diesel.cs" />
+    <Compile Include="Actores\RobinWilliams.cs" />
+    <Compile Include="Actores\SigourneyWeaver.cs" />
+    <Compile Include="Actores\TomHanks.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
