@@ -14,8 +14,8 @@ namespace Project_7
 
         public Juego()
         {
-            bitmons.Add(new RobinWilliams() );
-            bitmons.Add(new Brad_Pitt());
+            bitmons.Add(new RobinWilliams());
+            bitmons.Add(new Brad_Pitt ());
             bitmons.Add(new SigourneyWeaver());
             bitmons.Add(new JimCarrey());
             bitmons.Add(new TomHanks());
