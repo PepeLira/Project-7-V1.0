@@ -56,7 +56,6 @@
     <Compile Include="Natalie Portman.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Sigourney Weaver.cs" />
     <Compile Include="Vin Diesel.cs" />
     <Compile Include="RobinWilliams.cs" />
     <Compile Include="SigourneyWeaver.cs" />

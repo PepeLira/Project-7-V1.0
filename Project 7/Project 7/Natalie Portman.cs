@@ -8,15 +8,16 @@ namespace Project_7
 {
     class Natalie_Portman : Bitmon
     {
-        public Natalie_Portman(string nombre, int hp, int estamina, int ataque, int defensa, int velocidad, string estado)
+        public Natalie_Portman()
         {
-            this.nombre = "Natalie Portman";
-            this.hp = 50;
-            this.Estamina = 100;
-            this.ataque = 50;
-            this.defensa = 50;
-            this.velocidad = 50;
-            this.estado = " ";
+            nombre = "Natalie Portman";
+            hp = 50;
+            Estamina = 100;
+            ataque = 50;
+            defensa = 50;
+            velocidad = 50;
+            estado = " ";
+            tipo = "Romance";
             ataques.Add(new Ataque("Arabesque", 50, 20, "Romance", 1, "Disminuir Hp Oponente", " ", " "));
             ataques.Add(new Ataque("Please open the door", 0, 20, "Accion", 1, "Aumentar Hp Activo", " ", " "));
             ataques.Add(new Ataque("Aggresive Negociations", 40, 20, "Sci-fi", 1, "Disminuir Hp Oponente", " ", " "));

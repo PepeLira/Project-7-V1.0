@@ -8,15 +8,16 @@ namespace Project_7
 {
     class Brad_Pitt : Bitmon
     {
-        public Brad_Pitt(string nombre, int hp, int estamina, int ataque, int defensa, int velocidad, string estado)
+        public Brad_Pitt()
         {
-            this.nombre = "Brad Pitt";
-            this.hp = 50;
-            this.Estamina = 100;
-            this.ataque = 50;
-            this.defensa = 50;
-            this.velocidad = 50;
-            this.estado = " ";
+            nombre = "Brad Pitt";
+            hp = 50;
+            Estamina = 100;
+            ataque = 50;
+            defensa = 50;
+            velocidad = 50;
+            estado = " ";
+            tipo = "Suspenso";
             ataques.Add(new Ataque("Whats in the Box", 60, 20, "Suspenso", 1, "Disminuir Hp Oponente", " ", " "));
             ataques.Add(new Ataque("Aquiles Strenght", 0, 20, "Drama", 1, "Aumentar Ataque Activo", " ", " "));
             ataques.Add(new Ataque("Crazy Monkey", 0, 20, "Suspenso", 1, "Disminuir Hp Oponente", "Aumentar Velocidad Activo ", " "));

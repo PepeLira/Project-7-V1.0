@@ -8,7 +8,7 @@ namespace Project_7
 {
     class Vin_Diesel : Bitmon
     {
-        public Vin_Diesel(string nombre, int hp, int estamina, int ataque, int defensa, int velocidad, string estado)
+        public Vin_Diesel()
         {
             this.nombre = "Vin Diesel";
             this.hp = 50;
@@ -17,6 +17,7 @@ namespace Project_7
             this.defensa = 50;
             this.velocidad = 50;
             this.estado = " ";
+            tipo = "Accion";
             ataques.Add(new Ataque("Suuupeeermaaan", 100, 20, "Aventura", 1, "Disminuir Hp Oponente", "Disminuir Hp Activo", " "));
             ataques.Add(new Ataque("I am Groot", 50, 20, "Aventura", 1, "Disminuir Hp Oponente", " ", "Paralizar"));
             ataques.Add(new Ataque("N2O", 0, 20, "Accion", 1, "Aumentar Velocidad Activo", " ", " "));
