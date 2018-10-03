@@ -15,6 +15,7 @@ namespace Project_7
         public int defensa { get; set; }
         public int velocidad { get; set; }
         public string estado { get; set; }
+        public string tipo { get; set; }
         public List<Ataque> ataques { get; set; }
 
         public void recibirAtaque()// muchas opciones para hacerlo, podemos hacer que resiva el ataque elegido por el usuario 

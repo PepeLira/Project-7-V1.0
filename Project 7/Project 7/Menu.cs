@@ -29,7 +29,20 @@ namespace Project_7
         public static int ElegirBitmon()
         {
             Console.WriteLine("Elije un bitmon");
-            int eleccion = Console.Read();
+            while (true)
+            {
+                string imput = Console.ReadLine();
+                int age;
+                if (!int.TryParse(imput, out age))
+                {
+                    Console.WriteLine("{0} is not an integer", imput);
+                    // Whatever
+                }
+                else
+                {
+                    break;
+                }
+            }
             return eleccion;
         }
     }
