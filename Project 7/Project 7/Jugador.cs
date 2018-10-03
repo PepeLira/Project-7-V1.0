@@ -27,18 +27,18 @@ namespace Project_7
             bitmons[posicion] = bitmon;
         }
 
-        public void darUnaOrden(string ordenRecibida)
+        public void darUnaOrden(int ordenRecibida)
         {
-            if(ordenRecibida == "Atacar,")
+            if(ordenRecibida == 0) //atacar
             {
-                Console.WriteLine("Seleccione Ataque");
+                
                 
             }
-            else if (ordenRecibida == "Descansar")
+            else if (ordenRecibida == 1) //descansar
             {
 
             }
-            else if (ordenRecibida == "Cambiar")
+            else if (ordenRecibida == 2) //cambiar actor
             {
 
             }

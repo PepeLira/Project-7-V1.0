@@ -8,14 +8,14 @@ namespace Project_7
 {
     class Bitmon
     {
-        protected string nombre;
-        protected int hp;
-        protected int Estamina;
-        protected int ataque;
-        protected int defensa;
-        protected int velocidad;
-        protected string estado;
-        protected List<Ataque> ataques;
+        public string nombre { get; }
+        public int hp { get; }
+        public int Estamina { get; }
+        public int ataque { get; }
+        public int defensa { get; }
+        public int velocidad { get; }
+        public string estado { get; }
+        public List<Ataque> ataques { get; }
 
         public void recibirAtaque()// muchas opciones para hacerlo, podemos hacer que resiva el ataque elegido por el usuario 
         {

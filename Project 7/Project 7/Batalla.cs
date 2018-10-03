@@ -37,8 +37,8 @@ namespace Project_7
             while (true)
             {
                 string imput = Console.ReadLine();
-                int age;
-                if (!int.TryParse(imput, out age))
+                int imputInt;
+                if (!int.TryParse(imput, out imputInt))
                 {
                     Console.WriteLine("{0} is not an integer", imput);
                     // Whatever
@@ -48,6 +48,9 @@ namespace Project_7
                     break;
                 }
             }
+
+            jugadorActivo.darUnaOrden();
+            
 
         }
 
