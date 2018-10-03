@@ -18,10 +18,10 @@ namespace Project_7
             velocidad = 50;
             estado = " ";
             tipo = "Drama";
-            ataques.Add(new Ataque("Frozen", 0, 20, "Drama", 1, "Aumentar Defensa Activo", " ", " "));
-            ataques.Add(new Ataque("Bear Claws", 50, 20, "Suspenso", 1, "Disminuir Hp Oponente", " ", " "));
-            ataques.Add(new Ataque("White Lines", 20, 20, "Drama", 1, "Disminuir Hp Oponente", "Aumentar Ataque Activo", " "));
-            ataques.Add(new Ataque("Spiner", 60, 20, "Comedia", 1, "DisminuirHpOponente", " ", "Confundir"));
+            ataques[0]= (new Ataque("Frozen", 0, 20, "Drama", 1, "Aumentar Defensa Activo", " ", " "));
+            ataques[1]= (new Ataque("Bear Claws", 50, 20, "Suspenso", 1, "Disminuir Hp Oponente", " ", " "));
+            ataques[2]= (new Ataque("White Lines", 20, 20, "Drama", 1, "Disminuir Hp Oponente", "Aumentar Ataque Activo", " "));
+            ataques[3]= (new Ataque("Spiner", 60, 20, "Comedia", 1, "DisminuirHpOponente", " ", "Confundir"));
         }
     }
 }

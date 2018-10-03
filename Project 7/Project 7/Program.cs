@@ -11,6 +11,8 @@ namespace Project_7
         static void Main(string[] args)
         {
             Menu.PantallaInicio();
+            Juego juego = new Juego();
+            juego.DesplegarBitmons();
 
         }
     }

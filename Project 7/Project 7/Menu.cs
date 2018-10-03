@@ -31,19 +31,17 @@ namespace Project_7
             Console.WriteLine("Elije un bitmon");
             while (true)
             {
-                string imput = Console.ReadLine();
-                int age;
-                if (!int.TryParse(imput, out age))
+                string input = Console.ReadLine();
+                if (!int.TryParse(input, out int age))
                 {
-                    Console.WriteLine("{0} is not an integer", imput);
+                    Console.WriteLine("{0} is not an integer", input);
                     // Whatever
                 }
                 else
                 {
-                    break;
+                    return age;
                 }
             }
-            return eleccion;
         }
     }
 }

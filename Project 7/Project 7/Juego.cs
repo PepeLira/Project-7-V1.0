@@ -43,6 +43,7 @@ namespace Project_7
                 Console.WriteLine(bitmon.Estamina);
                 Console.WriteLine(bitmon.ataque);
                 Console.WriteLine(bitmon.defensa);
+                Console.WriteLine("======================================");
             }
         }
         private void AsignarBitmons()

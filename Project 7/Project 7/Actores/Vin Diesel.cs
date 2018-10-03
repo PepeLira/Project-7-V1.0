@@ -18,10 +18,10 @@ namespace Project_7
             velocidad = 50;
             estado = " ";
             tipo = "Accion";
-            ataques.Add(new Ataque("Suuupeeermaaan", 100, 20, "Aventura", 1, "Disminuir Hp Oponente", "Disminuir Hp Activo", " "));
-            ataques.Add(new Ataque("I am Groot", 50, 20, "Aventura", 1, "Disminuir Hp Oponente", " ", "Paralizar"));
-            ataques.Add(new Ataque("N2O", 0, 20, "Accion", 1, "Aumentar Velocidad Activo", " ", " "));
-            ataques.Add(new Ataque("Peter Panda", 0, 20, "Terror", 1, "Aumentar Defensa Activo", " ", " "));
+            ataques[0]=(new Ataque("Suuupeeermaaan", 100, 20, "Aventura", 1, "Disminuir Hp Oponente", "Disminuir Hp Activo", " "));
+            ataques[1]= (new Ataque("I am Groot", 50, 20, "Aventura", 1, "Disminuir Hp Oponente", " ", "Paralizar"));
+            ataques[2]= (new Ataque("N2O", 0, 20, "Accion", 1, "Aumentar Velocidad Activo", " ", " "));
+            ataques[3]= (new Ataque("Peter Panda", 0, 20, "Terror", 1, "Aumentar Defensa Activo", " ", " "));
         }
     }
 }
