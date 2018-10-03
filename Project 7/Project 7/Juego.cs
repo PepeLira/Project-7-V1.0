@@ -22,6 +22,7 @@ namespace Project_7
             bitmons.Add(new Johnny_Deep());
             bitmons.Add(new Natalie_Portman());
             bitmons.Add(new Vin_Diesel());
+            bitmons.Add(new Leonardo_Dicaprio());
         }
         private void CrearJugadores()
         {

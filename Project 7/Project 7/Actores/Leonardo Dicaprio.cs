@@ -10,6 +10,7 @@ namespace Project_7
     {
         public Leonardo_Dicaprio()
         {
+            nombre = "Leonardo Dicaprio";
             hp = 50;
             Estamina = 100;
             ataque = 50;
