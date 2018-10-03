@@ -15,10 +15,11 @@ namespace Project_7
             ataque = 50;
             defensa = 50;
             velocidad = 50;
+            tipo = "Comedia";
             ataques.Add(new Ataque("B-e-a-utiful", 40, 20, "Comedia", 1, "DisminuirHpOponente", " ", " "));
-            ataques.Add(new Ataque("CubanPete", 0, 20, "Comedia", 1, "AumentarHpActivo", " ", " "));
+            ataques.Add(new Ataque("Cuban Pete", 0, 20, "Comedia", 1, "AumentarHpActivo", " ", " "));
             ataques.Add(new Ataque("Lies", 30, 20, "Comedia", 1, "DisminuirHpOponente", " ", "Paralizar"));
-            ataques.Add(new Ataque("AwfulIdea", 60, 20, "Comedia", 1, "DisminuirHpOponente", " ", " "));
+            ataques.Add(new Ataque("Awful Idea", 60, 20, "Comedia", 1, "DisminuirHpOponente", " ", " "));
         }
     }
 }

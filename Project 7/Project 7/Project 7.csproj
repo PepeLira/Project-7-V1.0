@@ -59,6 +59,8 @@
     <Compile Include="Sigourney Weaver.cs" />
     <Compile Include="Vin Diesel.cs" />
     <Compile Include="RobinWilliams.cs" />
+    <Compile Include="SigourneyWeaver.cs" />
+    <Compile Include="TomHanks.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
