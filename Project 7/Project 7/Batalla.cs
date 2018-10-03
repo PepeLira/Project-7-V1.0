@@ -30,9 +30,13 @@ namespace Project_7
             return jugadorActivo;
         }
 
-        public void turnoDePartida(string accion)
+        public void turno(string accion)
         {
-            
+            Console.Write("Turno de {0}, desea:\n [0] Atacar\n [1] Descansar\n [2] Cambiar Actor\n", jugadorActivo.nombre);
+            string imput = Console.ReadLine();
+
+
+
         }
 
         public Jugador iniciarBatalla(Jugador jugador1, Jugador jugador2)

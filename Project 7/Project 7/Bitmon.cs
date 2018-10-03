@@ -17,15 +17,15 @@ namespace Project_7
         protected string estado;
         protected List<Ataque> ataques;
 
-        void recibirAtaque()// muchas opciones para hacerlo, podemos hacer que resiva el ataque elegido por el usuario 
+        public void recibirAtaque()// muchas opciones para hacerlo, podemos hacer que resiva el ataque elegido por el usuario 
         {
             
         }
-        int atacar(Ataque ataqueElegido)
+        public int atacar(Ataque ataqueElegido)
         {
             return 0 ;
         }
-        void recuperarEstamina()
+        public void recuperarEstamina()
         {
 
         }

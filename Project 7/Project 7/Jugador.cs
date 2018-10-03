@@ -8,7 +8,7 @@ namespace Project_7
 {
     class Jugador
     {
-        private string nombre;
+        public string nombre { get; }
         private List<Bitmon> bitmons;
         private Bitmon BitmonActivo;
 
@@ -25,6 +25,15 @@ namespace Project_7
         public void AgregarBitmon(int posicion, Bitmon bitmon)
         {
             bitmons[posicion] = bitmon;
+        }
+
+        public void darUnaOrden(string ordenRecibida)
+        {
+            if(ordenRecibida == "atacar")
+            {
+                Console.WriteLine("Seleccione Ataque");
+                
+            }
         }
     }
 }
