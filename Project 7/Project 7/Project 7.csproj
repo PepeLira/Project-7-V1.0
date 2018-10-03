@@ -48,12 +48,17 @@
     <Compile Include="Bitmon.cs" />
     <Compile Include="Brad Pitt.cs" />
     <Compile Include="Johnny Deep.cs" />
+    <Compile Include="JackNicholson.cs" />
+    <Compile Include="JimCarrey.cs" />
     <Compile Include="Juego.cs" />
     <Compile Include="Jugador.cs" />
     <Compile Include="Menu.cs" />
+    <Compile Include="Natalie Portman.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sigourney Weaver.cs" />
     <Compile Include="Vin Diesel.cs" />
+    <Compile Include="RobinWilliams.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
