@@ -10,13 +10,13 @@ namespace Project_7
     {
         public Vin_Diesel()
         {
-            this.nombre = "Vin Diesel";
-            this.hp = 50;
-            this.Estamina = 100;
-            this.ataque = 50;
-            this.defensa = 50;
-            this.velocidad = 50;
-            this.estado = " ";
+            nombre = "Vin Diesel";
+            hp = 50;
+            Estamina = 100;
+            ataque = 50;
+            defensa = 50;
+            velocidad = 50;
+            estado = " ";
             tipo = "Accion";
             ataques.Add(new Ataque("Suuupeeermaaan", 100, 20, "Aventura", 1, "Disminuir Hp Oponente", "Disminuir Hp Activo", " "));
             ataques.Add(new Ataque("I am Groot", 50, 20, "Aventura", 1, "Disminuir Hp Oponente", " ", "Paralizar"));

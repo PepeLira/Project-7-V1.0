@@ -34,11 +34,15 @@ namespace Project_7
             string nombre2 = Menu.PedirNombre();
             jugador2 = new Jugador(nombre2);
         }
-        private void DesplegarBitmons()
+        public void DesplegarBitmons()
         {
             foreach (Bitmon bitmon in bitmons)
             {
-                //Console.WriteLine(bitmon.getnombre());   hacer getters
+                Console.WriteLine(bitmon.nombre);
+                Console.WriteLine(bitmon.hp);
+                Console.WriteLine(bitmon.Estamina);
+                Console.WriteLine(bitmon.ataque);
+                Console.WriteLine(bitmon.defensa);
             }
         }
         private void AsignarBitmons()

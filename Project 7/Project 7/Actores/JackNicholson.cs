@@ -10,11 +10,13 @@ namespace Project_7
     {
         public JackNicholson()
         {
+            nombre = "Jack Nicholson";
             hp = 50;
             Estamina = 100;
             ataque = 50;
             defensa = 50;
             velocidad = 50;
+            estado = " ";
             tipo = "Terror";
             ataques.Add(new Ataque("Here's Johnny", 70, 20, "Terror", 1, "DisminuirHpOponente", " ", " "));
             ataques.Add(new Ataque("Laugther", 20, 20, "Terror", 1, "DisminuirHpOponente", " ", "Paralizar"));
