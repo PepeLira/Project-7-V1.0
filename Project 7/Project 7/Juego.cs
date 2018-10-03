@@ -47,6 +47,14 @@ namespace Project_7
             Console.WriteLine("Jugador 2");
             jugador2.AgregarBitmon(2, bitmons[Menu.ElegirBitmon() - 1]);
         }
+        public int MultiplicadorTipo(string tipo1, string tipo2)
+        {
+            return 0;
+            if ((tipo1 == "Historico" && tipo2 == "Aventura")|| (tipo1 == "Historico" && tipo2 == "Comedia")|| (tipo1 == "Suspenso" && tipo2 == "Historico") || (tipo1 == "Suspenso" && tipo2 == "Accion") || (tipo1 == "Aventura" && tipo2 == "Aventura") || (tipo1 == "Aventura" && tipo2 == "Comedia") || (tipo1 == "Aventura" && tipo2 == "Romance") || (tipo1 == "Comedia" && tipo2 == "Accion") || (tipo1 == "Comedia" && tipo2 == "Romance") || (tipo1 == "Comedia" && tipo2 == "Muerto") || (tipo1 == "Accion" && tipo2 == "Comedia") || (tipo1 == "Drama" && tipo2 == "Aventura") || (tipo1 == "Drama" && tipo2 == "Drama") || (tipo1 == "Romance" && tipo2 == "Suspenso") || (tipo1 == "Romance" && tipo2 == "Drama") || (tipo1 == "Romance" && tipo2 == "Romance") || (tipo1 == "Scifi" && tipo2 == "Aventura") || (tipo1 == "Scifi" && tipo2 == "Scifi") || (tipo1 == "Muerto" && tipo2 == "Terror") || (tipo1 == "Terror" && tipo2 == "Accion") || (tipo1 == "Terror" && tipo2 == "Terror"))
+            {
+                return 1 / 2;
+            }
+        }
 
     }
 }

@@ -15,7 +15,7 @@ namespace Project_7
         protected int defensa;
         protected int velocidad;
         protected string estado;
-        protected List<Ataque> ataques;
+        protected Ataque[] ataques;
 
         public void recibirAtaque()// muchas opciones para hacerlo, podemos hacer que resiva el ataque elegido por el usuario 
         {
