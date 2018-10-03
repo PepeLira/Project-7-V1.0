@@ -29,14 +29,13 @@ namespace Project_7
 
         public void darUnaOrden(int ordenRecibida)
         {
-            if(ordenRecibida == 0) //atacar
+            if(ordenRecibida == 0) //elegir ataque
             {
-                
                 
             }
             else if (ordenRecibida == 1) //descansar
             {
-
+                
             }
             else if (ordenRecibida == 2) //cambiar actor
             {

@@ -8,13 +8,13 @@ namespace Project_7
 {
     class Ataque
     {
-        string nombre;
-        int potencia;
-        int coste;
-        string tipo;
-        float accuracy;
-        string efecto1; // Puede ser "cambiar de estado", "bajar hp", "bajar defensa", "bajar velocidad"... etc.
-        string efecto2;// ataques podran tener dos efectos
+        public string nombre { get; }
+        public int potencia { get; }
+        public int coste { get; }
+        public string tipo { get; }
+        public float accuracy { get; }
+        public string efecto1 { get; } // Puede ser "cambiar de estado", "bajar hp", "bajar defensa", "bajar velocidad"... etc.
+        public string efecto2 { get; }// ataques podran tener dos efectos
         string estadoEfectuado; // por ejemplo si el bitmon se paraliza, necesitamos poder guardar est en un ataque. Si ataque no produce cambio de estado esto sera "null" supongo ':)
 
         public Ataque(string nombre, int potencia, int coste, string tipo, float accuracy, string efecto1, string efecto2, string estadoEfectuado)

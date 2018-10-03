@@ -46,6 +46,7 @@
     <Compile Include="Ataque.cs" />
     <Compile Include="Batalla.cs" />
     <Compile Include="Bitmon.cs" />
+    <Compile Include="Consola.cs" />
     <Compile Include="Juego.cs" />
     <Compile Include="Jugador.cs" />
     <Compile Include="Menu.cs" />

@@ -8,6 +8,7 @@ namespace Project_7
 {
     class Batalla
     {
+        Consola consola = new Consola();
         Jugador jugadorActivo;
         bool finDePartida = false;
         Jugador jugadorGanador;
@@ -32,26 +33,7 @@ namespace Project_7
 
         public void turno(string accion)
         {
-            Console.Write("Turno de {0}, desea:\n [0] Atacar\n [1] Descansar\n [2] Cambiar Actor\n", jugadorActivo.nombre);
-            
-            while (true)
-            {
-                string imput = Console.ReadLine();
-                int imputInt;
-                if (!int.TryParse(imput, out imputInt))
-                {
-                    Console.WriteLine("{0} is not an integer", imput);
-                    // Whatever
-                }
-                else
-                {
-                    jugadorActivo.darUnaOrden(imputInt);
-                    break;
-                }
-            }
-
-            
-            
+            jugadorActivo.darUnaOrden(consola.preguntarAccionTurno(jugadorActivo.nombre)); // Pregunta que accion tomara en su turno
 
         }
 
