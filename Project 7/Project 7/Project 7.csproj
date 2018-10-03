@@ -52,6 +52,7 @@
     <Compile Include="JimCarrey.cs" />
     <Compile Include="Juego.cs" />
     <Compile Include="Jugador.cs" />
+    <Compile Include="Leonardo Dicaprio.cs" />
     <Compile Include="Menu.cs" />
     <Compile Include="Natalie Portman.cs" />
     <Compile Include="Program.cs" />
