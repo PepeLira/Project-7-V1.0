@@ -24,12 +24,14 @@ namespace Project_7
                 if (!int.TryParse(input, out int age))
                 {
                     Console.WriteLine("{0} no es un numero.", input);
+                    continue;
                 }
                 else
                 {
                     if (age>0 && age< bitmons.Count()+1)
                         return age;
                     Console.WriteLine("Actor fuera de rango.Introducelo de nuevo.");
+                    continue;
                 }
             }
         }
