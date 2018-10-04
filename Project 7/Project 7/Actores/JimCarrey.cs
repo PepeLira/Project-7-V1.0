@@ -18,10 +18,10 @@ namespace Project_7
             velocidad = 50;
             estado = " ";
             tipo = "Comedia";
-            ataques[0]= (new Ataque("B-e-a-utiful", 40, 20, "Comedia", 1, "Disminuir Hp Oponente", " ", " "));
-            ataques[1]= (new Ataque("Cuban Pete", 0, 20, "Comedia", 1, "Aumentar Hp Activo", " ", " "));
-            ataques[2]= (new Ataque("Lies", 30, 20, "Comedia", 1, "Disminuir Hp Oponente", " ", "Paralizar"));
-            ataques[3]= (new Ataque("Awful Idea", 60, 20, "Comedia", 1, "Disminuir Hp Oponente", " ", " "));
+            ataques.Add(new Ataque("B-e-a-utiful", 40, 20, "Comedia", 1, "Disminuir Hp Oponente", " ", " "));
+            ataques.Add(new Ataque("Cuban Pete", 0, 20, "Comedia", 1, "Aumentar Hp Activo", " ", " "));
+            ataques.Add(new Ataque("Lies", 30, 20, "Comedia", 1, "Disminuir Hp Oponente", " ", "Paralizar"));
+            ataques.Add(new Ataque("Awful Idea", 60, 20, "Comedia", 1, "Disminuir Hp Oponente", " ", " "));
         }
     }
 }

@@ -18,10 +18,10 @@ namespace Project_7
             velocidad = 50;
             estado = " ";
             tipo = "Romance";
-            ataques[0]= (new Ataque("Arabesque", 50, 20, "Romance", 1, "Disminuir Hp Oponente", " ", " "));
-            ataques[1]= (new Ataque("Please open the door", 0, 20, "Accion", 1, "Aumentar Hp Activo", " ", " "));
-            ataques[2]= (new Ataque("Aggresive Negociations", 40, 20, "Sci-fi", 1, "Disminuir Hp Oponente", " ", " "));
-            ataques[3]= (new Ataque("Nice weiner", 30, 20, "Romance", 1, "Disminuir Hp Oponente", " ", "Confundir"));
+            ataques.Add(new Ataque("Arabesque", 50, 20, "Romance", 1, "Disminuir Hp Oponente", " ", " "));
+            ataques.Add(new Ataque("Please open the door", 0, 20, "Accion", 1, "Aumentar Hp Activo", " ", " "));
+            ataques.Add(new Ataque("Aggresive Negociations", 40, 20, "Sci-fi", 1, "Disminuir Hp Oponente", " ", " "));
+            ataques.Add(new Ataque("Nice weiner", 30, 20, "Romance", 1, "Disminuir Hp Oponente", " ", "Confundir"));
         }
     }
 }

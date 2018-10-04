@@ -16,7 +16,7 @@ namespace Project_7
         public int velocidad { get; set; }
         public string estado { get; set; }
         public string tipo { get; set; }
-        public Ataque[] ataques = new Ataque[4];
+        public List<Ataque> ataques;
 
         // Pepecosas: necesitamos que Bitmon reciba una instrucción, la guarde y luego la ejecute cuando los dos jugadores hayan tomado sus desiciones.
 

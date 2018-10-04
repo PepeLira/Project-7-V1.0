@@ -27,7 +27,7 @@ namespace Project_7
                 }
             }
         }
-        public int elegirAtaque(List<Ataque> ataquesBitmonActivo)
+        public int elegirAtaque(Ataque[] ataquesBitmonActivo)
         {
             int cont = 0;
             foreach (Ataque ataque in ataquesBitmonActivo)
@@ -71,21 +71,19 @@ namespace Project_7
             for (int i = 0; i < bitmons.Length-1 ; i+=1)
             {
                 Console.WriteLine("Numero Actor : [{0}]", i);
-                Console.WriteLine("Nombre Actor: {0}", bitmons[i].nombre);
+                Console.WriteLine("Nombre Ataque: {0}", ataque.nombre);
                 Console.WriteLine("  ==========================================");
-                Console.WriteLine("  | HP | {0}", bitmons[i].hp);
+                Console.WriteLine("  | Potencia | {0}", ataque.potencia);
                 Console.WriteLine("  ==========================================");
-                Console.WriteLine("  | Tipo | {0}", bitmons[i].tipo);
+                Console.WriteLine("  | Coste | {0}", ataque.coste);
                 Console.WriteLine("  ==========================================");
-                Console.WriteLine("  | Estamina | {0}", bitmons[i].Estamina);
+                Console.WriteLine("  | Tipo | {0}", ataque.tipo);
                 Console.WriteLine("  ==========================================");
-                Console.WriteLine("  | Ataque | {0}", bitmons[i].ataque);
+                Console.WriteLine("  | Efecto1 | {0}", ataque.efecto1);
                 Console.WriteLine("  ==========================================");
-                Console.WriteLine("  | Defensa | {0}", bitmons[i].defensa);
+                Console.WriteLine("  | Efecto2 | {0}", ataque.efecto2);
                 Console.WriteLine("  ==========================================");
-                Console.WriteLine("  | Velocidad | {0}", bitmons[i].velocidad);
-                Console.WriteLine("  ==========================================");
-                Console.WriteLine("  | Estado | {0}", bitmons[i].estado);
+                Console.WriteLine("  |Modificador de estado| {0}", ataque.estadoEfectuado);
                 Console.WriteLine("  ==========================================");
                 
 

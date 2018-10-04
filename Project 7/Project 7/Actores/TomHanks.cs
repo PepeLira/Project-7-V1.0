@@ -18,10 +18,10 @@ namespace Project_7
             velocidad = 50;
             estado = " ";
             tipo = "Historico";
-            ataques[0]=(new Ataque("Run, Forest, Run", 0, 20, "Historico", 1, "Aumentar Velocidad Activo", " ", " "));
-            ataques[1]=(new Ataque("Wilson", 60, 20, "Drama", 1, "Disminuir Hp Oponente", " ", " "));
-            ataques[2]=(new Ataque("Jomare", 0, 20, "Historico", 1, "Aumentar Defensa Activo", " ", " "));
-            ataques[3]=(new Ataque("You are a Toy", 60, 20, "Comedia", 1, "Disminuir Hp Oponente", " ", " "));
+            ataques.Add(new Ataque("Run, Forest, Run", 0, 20, "Historico", 1, "Aumentar Velocidad Activo", " ", " "));
+            ataques.Add(new Ataque("Wilson", 60, 20, "Drama", 1, "Disminuir Hp Oponente", " ", " "));
+            ataques.Add(new Ataque("Jomare", 0, 20, "Historico", 1, "Aumentar Defensa Activo", " ", " "));
+            ataques.Add(new Ataque("You are a Toy", 60, 20, "Comedia", 1, "Disminuir Hp Oponente", " ", " "));
         }
     }
 }

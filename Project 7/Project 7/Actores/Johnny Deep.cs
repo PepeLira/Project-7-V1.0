@@ -18,10 +18,10 @@ namespace Project_7
             velocidad = 50;
             estado = " ";
             tipo = "Aventura";
-            ataques[0]= (new Ataque("Dizziness", 0, 20, "Aventura", 1, "Aumentar Ataque Activo", " ", " "));
-            ataques[1]= (new Ataque("Ommpa-Loompas", 40, 20, "Aventura", 1, "Disminuir Hp Oponente", " ", " "));
-            ataques[2]= (new Ataque("Tommy Gun", 30, 20, "Accion", 1, "Disminuir Hp Oponente", " ", " "));
-            ataques[3]= (new Ataque("Cut", 40, 20, "Terror", 1, "Disminuir Hp Oponente", " ", " "));
+            ataques.Add(new Ataque("Dizziness", 0, 20, "Aventura", 1, "Aumentar Ataque Activo", " ", " "));
+            ataques.Add(new Ataque("Ommpa-Loompas", 40, 20, "Aventura", 1, "Disminuir Hp Oponente", " ", " "));
+            ataques.Add(new Ataque("Tommy Gun", 30, 20, "Accion", 1, "Disminuir Hp Oponente", " ", " "));
+            ataques.Add(new Ataque("Cut", 40, 20, "Terror", 1, "Disminuir Hp Oponente", " ", " "));
         }
     }
 }
