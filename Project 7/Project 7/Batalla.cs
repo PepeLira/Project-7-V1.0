@@ -47,6 +47,8 @@ namespace Project_7
             }
         }
 
+
+
         public Jugador iniciarBatalla(Jugador jugador1, Jugador jugador2)
         {
             elegirJugadorInicial(jugador1, jugador2);

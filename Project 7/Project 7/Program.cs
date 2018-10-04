@@ -13,6 +13,7 @@ namespace Project_7
             //Menu.PantallaInicio();
             Juego juego = new Juego();
             juego.DesplegarBitmons();
+            Console.ReadKey();
 
         }
     }
