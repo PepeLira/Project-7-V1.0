@@ -11,8 +11,8 @@ namespace Project_7
         Consola consola = new Consola();
         public string nombre { get; }
         private Bitmon[] bitmons = new Bitmon[3];
-        private Bitmon BitmonActivo;
-        string jugadaTurno;
+        public Bitmon BitmonActivo { get; set; }
+        public string jugadaTurno { get; set; }
         int ataqueElegido;
 
         public Jugador(string nombre)
@@ -82,12 +82,13 @@ namespace Project_7
             {
                 jugadaTurno = "descasar";
             }
-            else if (ordenRecibida == 2) //cambiar actor
+            else if (ordenRecibida == 2) //cambiar actor pepeCosas: necesito solucionar el caso de que pasa si solo queda un bitmon con Hp != de 0
             {
                 jugadaTurno = "cambiar actor";
-                int bitmonElegido = consola.elegirBitmon(bitmons);
+                
                 while (true)
                 {
+                    int bitmonElegido = consola.elegirBitmon(bitmons);
                     if (bitmons[bitmonElegido] == BitmonActivo)
                     {
                         Console.WriteLine("Actor activo, elige otro!");

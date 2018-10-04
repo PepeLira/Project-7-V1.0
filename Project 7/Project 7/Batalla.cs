@@ -47,7 +47,21 @@ namespace Project_7
             }
         }
 
+        void bitmonEscuchanInstruccion(Jugador jugador) //pepe cosas: Bitmon tiene que poder activar metodo de recivir daño en su oponente 
+        {
+            if (jugador.jugadaTurno == "atacar")
+            {
 
+            }
+            else if (jugador.jugadaTurno == "descasar")
+            {
+
+            }
+            else if (jugador.jugadaTurno == "cambiar actor")
+            {
+
+            }
+        }
 
         public Jugador iniciarBatalla(Jugador jugador1, Jugador jugador2)
         {
@@ -57,10 +71,35 @@ namespace Project_7
             {
                 turno();
                 turnoDelSiguienteJugador(jugador1, jugador2);
+                turno();
+                turnoDelSiguienteJugador(jugador1, jugador2);
+
+                //Bitmons ejecutan acciones
+
+                for (int i = 0; i < 2; i += 1)
+                {
+                    if (jugador1.BitmonActivo.velocidad > jugador2.BitmonActivo.velocidad && i == 0)
+                    {
+                        bitmonEscuchanInstruccion(jugador1);
+                    }
+                    else if (jugador2.BitmonActivo.velocidad > jugador1.BitmonActivo.velocidad && i == 0)
+                    {
+                        bitmonEscuchanInstruccion(jugador2);
+                    }
+                    if (jugador1.BitmonActivo.velocidad > jugador2.BitmonActivo.velocidad && i == 1)
+                    {
+                        bitmonEscuchanInstruccion(jugador2);
+                    }
+                    else if (jugador2.BitmonActivo.velocidad > jugador1.BitmonActivo.velocidad && i == 1)
+                    {
+                        bitmonEscuchanInstruccion(jugador1);
+                    }
+
+                }
 
             }
 
-            return jugadorActivo;
+            return jugadorGanador;
         }
 
         public static int MultiplicadorTipo(string tipo1, string tipo2)

@@ -67,7 +67,7 @@ namespace Project_7
         }
         public int elegirBitmon(Bitmon[] bitmons)
         {
-            for (int i = 0; i < bitmons.Length-1 ; i+=1)
+            for (int i = 0; i < bitmons.Length ; i+=1)
             {
                 if (bitmons[i].hp != 0)
                 {
