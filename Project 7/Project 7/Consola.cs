@@ -27,7 +27,7 @@ namespace Project_7
                 }
             }
         }
-        public int elegirAtaque(Ataque[] ataquesBitmonActivo)
+        public int elegirAtaque(List<Ataque> ataquesBitmonActivo)
         {
             int cont = 0;
             foreach (Ataque ataque in ataquesBitmonActivo)
