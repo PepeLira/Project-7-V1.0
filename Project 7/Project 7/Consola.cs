@@ -23,7 +23,6 @@ namespace Project_7
                 else
                 {
                     return (imputInt);
-                    break;
                 }
             }
         }
@@ -62,7 +61,7 @@ namespace Project_7
                 else
                 {
                     return (imputInt);
-                    break;
+                    
                 }
             }
         }
@@ -70,23 +69,34 @@ namespace Project_7
         {
             for (int i = 0; i < bitmons.Length-1 ; i+=1)
             {
-                Console.WriteLine("Numero Actor : [{0}]", i);
-                Console.WriteLine("Nombre Actor: {0}", bitmons[i].nombre);
-                Console.WriteLine("  ==========================================");
-                Console.WriteLine("  | Tipo | {0}", bitmons[i].tipo);
-                Console.WriteLine("  ==========================================");
-                Console.WriteLine("  | HP | {0}", bitmons[i].hp);
-                Console.WriteLine("  ==========================================");
-                Console.WriteLine("  | Estamina | {0}", bitmons[i].Estamina);
-                Console.WriteLine("  ==========================================");
-                Console.WriteLine("  | Ataque | {0}", bitmons[i].ataque);
-                Console.WriteLine("  ==========================================");
-                Console.WriteLine("  | Defensa | {0}", bitmons[i].defensa);
-                Console.WriteLine("  ==========================================");
-                Console.WriteLine("  | Velocidad | {0}", bitmons[i].velocidad);
-                Console.WriteLine("  ==========================================");
-                Console.WriteLine("  | Estado | {0}", bitmons[i].estado);
-                Console.WriteLine("  ==========================================");
+                if (bitmons[i].hp != 0)
+                {
+                    Console.WriteLine("Numero Actor : [{0}]", i);
+                    Console.WriteLine("Nombre Actor: {0}", bitmons[i].nombre);
+                    Console.WriteLine("  ==========================================");
+                    Console.WriteLine("  | Tipo | {0}", bitmons[i].tipo);
+                    Console.WriteLine("  ==========================================");
+                    Console.WriteLine("  | HP | {0}", bitmons[i].hp);
+                    Console.WriteLine("  ==========================================");
+                    Console.WriteLine("  | Estamina | {0}", bitmons[i].Estamina);
+                    Console.WriteLine("  ==========================================");
+                    Console.WriteLine("  | Ataque | {0}", bitmons[i].ataque);
+                    Console.WriteLine("  ==========================================");
+                    Console.WriteLine("  | Defensa | {0}", bitmons[i].defensa);
+                    Console.WriteLine("  ==========================================");
+                    Console.WriteLine("  | Velocidad | {0}", bitmons[i].velocidad);
+                    Console.WriteLine("  ==========================================");
+                    Console.WriteLine("  | Estado | {0}", bitmons[i].estado);
+                    Console.WriteLine("  ==========================================");
+                }
+                else // "debe mostrar a los bitmons del equipo que no estén exhaustos." estos son los Bitmons muertos... recordar poner estado Fuera de Combate
+                {
+                    Console.WriteLine("Numero Actor : [{0}]", i);
+                    Console.WriteLine("Nombre Actor: {0}", bitmons[i].nombre);
+                    Console.WriteLine("  ==========================================");
+                    Console.WriteLine("  | Estado | {0}", bitmons[i].estado);
+                    Console.WriteLine("  ==========================================");
+                }
 
             }
             while (true)
@@ -101,10 +111,10 @@ namespace Project_7
                 else
                 {
                     return (imputInt);
-                    break;
+                    
                 }
             }
-            return 1;
+            
         }
     }
 }

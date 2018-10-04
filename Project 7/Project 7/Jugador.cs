@@ -20,14 +20,8 @@ namespace Project_7
             this.nombre = nombre;
         }
 
-        private void CambiarBitmon()
+        private void CambiarBitmon(int posicion)
         {
-            int posicion = Console.Read();
-            while ((BitmonActivo == bitmons[posicion])||(posicion>2)||(posicion<0))
-            {
-                Console.WriteLine("Cambio invalido. Intruduce el cambio de nuevo:");
-                posicion = Console.Read();
-            }
             BitmonActivo = bitmons[posicion];
         
         }
@@ -91,7 +85,7 @@ namespace Project_7
             else if (ordenRecibida == 2) //cambiar actor
             {
                 jugadaTurno = "cambiar actor";
-                CambiarBitmon();
+                CambiarBitmon(consola.elegirBitmon(bitmons));
             }
         }
     }
