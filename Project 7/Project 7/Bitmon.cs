@@ -53,7 +53,7 @@ namespace Project_7
 
         }
 
-        public Ataque atacar(int ataqueElegido)
+        public Ataque atacar(int ataqueElegido)//Atacar ademas de retornar el ataque que afecta al bitmon contrario, aplica los efectos al bitmon atacante si es que los hay.
         {
             if ((ataques[ataqueElegido].potencia > 0) && (ataques[ataqueElegido].efecto1 == "Disminuir Hp Activo" || ataques[ataqueElegido].efecto2 == "Disminuir Hp Activo") && (ataques[ataqueElegido].nombre == "Suuupeeermaaan" || ataques[ataqueElegido].nombre == "Alien Queen"))
             {
@@ -70,6 +70,18 @@ namespace Project_7
             if (ataques[ataqueElegido].efecto1 == "Disminuir Ataque Activo" || ataques[ataqueElegido].efecto2 == "Disminuir Ataque Activo")
             {
                 ataque = ataque - 15;
+            }
+            if (ataques[ataqueElegido].efecto1 == "Aumentar Defensa Activo" || ataques[ataqueElegido].efecto2 == "Aumentar Defensa Activo")
+            {
+                defensa = defensa + 15;
+            }
+            if (ataques[ataqueElegido].efecto1 == "Aumentar Velocidad Activo" || ataques[ataqueElegido].efecto2 == "Aumentar Velocidad Activo")
+            {
+                velocidad = velocidad + 15;
+            }
+            if (ataques[ataqueElegido].efecto1 == "Aumentar Ataque Activo" || ataques[ataqueElegido].efecto2 == "Aumentar Ataque Activo")
+            {
+                ataque = ataque + 15;
             }
             if (ataques[ataqueElegido].efecto1 == "Dormir Activo")
             {
