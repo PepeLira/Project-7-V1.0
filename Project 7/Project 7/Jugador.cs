@@ -76,7 +76,7 @@ namespace Project_7
             if(ordenRecibida == 0) //elegir ataque
             {
                 jugadaTurno = "atacar";
-                ataqueElegido = consola.elegirAtaque(BitmonActivo.ataques); 
+                ataqueElegido = consola.elegirAtaque(BitmonActivo.ataques,nombre); 
             }
             else if (ordenRecibida == 1) //descansar
             {
@@ -88,7 +88,7 @@ namespace Project_7
                 
                 while (true)
                 {
-                    int bitmonElegido = consola.elegirBitmon(bitmons);
+                    int bitmonElegido = consola.elegirBitmon(bitmons,nombre);
                     if (bitmons[bitmonElegido] == BitmonActivo)
                     {
                         Console.WriteLine("Actor activo, elige otro!");
