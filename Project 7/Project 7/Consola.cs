@@ -8,6 +8,32 @@ namespace Project_7
 {
     class Consola
     {
+        public static string PedirNombre()
+        {
+            Console.WriteLine("Introduce tu nombre");
+            string nombre = Console.ReadLine();
+            return nombre;
+        }
+
+        public static int ElegirBitmon(List<Bitmon> bitmons)
+        {
+            Console.WriteLine("Elije un actor");
+            while (true)
+            {
+                string input = Console.ReadLine();
+                if (!int.TryParse(input, out int age))
+                {
+                    Console.WriteLine("{0} no es un numero.", input);
+                }
+                else
+                {
+                    if (age>0 && age< bitmons.Count()+1)
+                        return age;
+                    Console.WriteLine("Actor fuera de rango.Introducelo de nuevo.");
+                }
+            }
+        }
+
         public int preguntarAccionTurno(string nombreJugador)
         {
             Console.Write("Turno de {0}, desea:\n [0] Atacar\n [1] Descansar\n [2] Cambiar Actor\n", nombreJugador);

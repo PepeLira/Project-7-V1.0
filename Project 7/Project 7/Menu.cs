@@ -99,29 +99,6 @@ xxkkkkkkkxdxkxkOo.             ..            ..                     .dKXXXXXXXKO
             Console.Clear();
         }
 
-        public static string PedirNombre()
-        {
-            Console.WriteLine("Introduce tu nombre");
-            string nombre = Console.ReadLine();
-            return nombre;
-        }
-
-        public static int ElegirBitmon()
-        {
-            Console.WriteLine("Elije un bitmon");
-            while (true)
-            {
-                string input = Console.ReadLine();
-                if (!int.TryParse(input, out int age))
-                {
-                    Console.WriteLine("{0} is not an integer", input);
-                    // Whatever
-                }
-                else
-                {
-                    return age;
-                }
-            }
-        }
+        
     }
 }
