@@ -24,7 +24,7 @@ namespace Project_7
         {
             if((ataqueRecibido.potencia > 0)&&(ataqueRecibido.efecto1 == "Disminuir Hp Oponente" || ataqueRecibido.efecto2 == "Disminuir Hp Oponente"))
             {
-                hp = hp - (((ataqueRecibido.potencia + (bitmonAgresor.ataque / 10)) * Juego.MultiplicadorTipo(bitmonAgresor.tipo, tipo)) / (defensa / 15));
+                hp = hp - (((ataqueRecibido.potencia + (bitmonAgresor.ataque / 10)) * Batalla.MultiplicadorTipo(bitmonAgresor.tipo, tipo)) / (defensa / 15));
             }
             if (ataqueRecibido.efecto1 == "Disminuir Defensa Oponente" || ataqueRecibido.efecto2 == "Disminuir Defensa Oponente")
             {
