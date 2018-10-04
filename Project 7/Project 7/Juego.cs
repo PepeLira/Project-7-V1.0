@@ -28,10 +28,10 @@ namespace Project_7
         public void CrearJugadores()
         {
             Console.WriteLine("Jugador 1");
-            string nombre1 = Menu.PedirNombre();
+            string nombre1 = Consola.PedirNombre();
             jugador1 = new Jugador(nombre1);
             Console.WriteLine("Jugador 2");
-            string nombre2 = Menu.PedirNombre();
+            string nombre2 = Consola.PedirNombre();
             jugador2 = new Jugador(nombre2);
         }
         public void DesplegarBitmons()
@@ -52,17 +52,17 @@ namespace Project_7
         public void AsignarBitmons()
         {
             Console.WriteLine("Jugador 1");
-            jugador1.AgregarBitmon(0, bitmons[Menu.ElegirBitmon() - 1]);
+            jugador1.AgregarBitmon(0, bitmons[Consola.ElegirBitmon(bitmons) - 1]);
             Console.WriteLine("Jugador 2");
-            jugador2.AgregarBitmon(0, bitmons[Menu.ElegirBitmon() - 1]);
+            jugador2.AgregarBitmon(0, bitmons[Consola.ElegirBitmon(bitmons) - 1]);
             Console.WriteLine("Jugador 2");
-            jugador2.AgregarBitmon(1, bitmons[Menu.ElegirBitmon() - 1]);
+            jugador2.AgregarBitmon(1, bitmons[Consola.ElegirBitmon(bitmons) - 1]);
             Console.WriteLine("Jugador 1");
-            jugador1.AgregarBitmon(1, bitmons[Menu.ElegirBitmon() - 1]);
+            jugador1.AgregarBitmon(1, bitmons[Consola.ElegirBitmon(bitmons) - 1]);
             Console.WriteLine("Jugador 1");
-            jugador1.AgregarBitmon(2, bitmons[Menu.ElegirBitmon() - 1]);
+            jugador1.AgregarBitmon(2, bitmons[Consola.ElegirBitmon(bitmons) - 1]);
             Console.WriteLine("Jugador 2");
-            jugador2.AgregarBitmon(2, bitmons[Menu.ElegirBitmon() - 1]);
+            jugador2.AgregarBitmon(2, bitmons[Consola.ElegirBitmon(bitmons) - 1]);
         }
         
 
