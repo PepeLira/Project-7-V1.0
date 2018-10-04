@@ -62,6 +62,8 @@ namespace Project_7
                 cont += 1;
 
             }
+            Console.WriteLine("Para volver al menu anterior presiona 9:");
+
             while (true)
             {
                 string imput = Console.ReadLine();
@@ -70,6 +72,10 @@ namespace Project_7
                 {
                     Console.WriteLine("{0} is not an integer", imput);
                     // Whatever
+                }
+                else if(imputInt == 9)
+                {
+                    //crear loop para volver al menu de opciones
                 }
                 else
                 {
@@ -113,6 +119,7 @@ namespace Project_7
                 }
 
             }
+            Console.WriteLine("Para volver al menu anterior presiona 9:");
             while (true)
             {
                 string imput = Console.ReadLine();
@@ -121,6 +128,10 @@ namespace Project_7
                 {
                     Console.WriteLine("{0} is not an integer", imput);
                     // Whatever
+                }
+                else if (imputInt == 9)
+                {
+                    //crear loop para volver al menu de opciones
                 }
                 else
                 {
