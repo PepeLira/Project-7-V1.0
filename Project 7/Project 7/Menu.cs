@@ -87,7 +87,7 @@ dxxxxxddddodxxkOd.                         ......                   ,x0KXKXXKK0x
 ddxxxxxxddoxkxkOd.                          .....                   ,kKKXXXXXK0dooodl:cc,:dxxdloxxxx
 xxxxxxxxxddxkxkOo.             ..           ....                    'kKXXXXXXK0xddddc::c;cxxxdodxxxx
 xxkkkkkkkxdxkxkOo.             ..            ..                     .dKXXXXXXXKOxodo:;:c;cxxxdodkxxx");
-            Console.ReadKey();
+            Console.ReadKey(true);
             System.Console.Clear();
             Console.CursorLeft = (Console.WindowWidth /2 - "BOLLYWOOD SHOWDOWN".Length/2);
             Console.CursorTop = (Console.WindowHeight / 4);
@@ -96,6 +96,7 @@ xxkkkkkkkxdxkxkOo.             ..            ..                     .dKXXXXXXXKO
             Console.CursorTop = (Console.WindowHeight *3 / 4);
             Console.Write("Presione cualquier tecla para continuar\n");
             Console.ReadKey(true);
+            Console.Clear();
         }
 
         public static string PedirNombre()

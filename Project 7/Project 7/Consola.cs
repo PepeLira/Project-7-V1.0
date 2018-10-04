@@ -22,11 +22,24 @@ namespace Project_7
                 }
                 else
                 {
+                    Console.Write("{0} a elegido :", nombreJugador);
+                    if(imputInt == 0)
+                    {
+                        Console.Write("Atacar");
+                    }
+                    else if (imputInt == 1)
+                    {
+                        Console.Write("Descansar");
+                    }
+                    else if (imputInt == 2)
+                    {
+                        Console.Write("Cambiar Actor");
+                    }
                     return (imputInt);
                 }
             }
         }
-        public int elegirAtaque(List<Ataque> ataquesBitmonActivo)
+        public int elegirAtaque(List<Ataque> ataquesBitmonActivo,string nombreJugador)
         {
             int cont = 0;
             foreach (Ataque ataque in ataquesBitmonActivo)
@@ -60,12 +73,13 @@ namespace Project_7
                 }
                 else
                 {
+                    Console.Write("{0} a elegido atacar con :", nombreJugador);
+                    Console.Write("{0}", ataquesBitmonActivo[imputInt]);
                     return (imputInt);
-                    
                 }
             }
         }
-        public int elegirBitmon(Bitmon[] bitmons)
+        public int elegirBitmon(Bitmon[] bitmons,string nombreJugador)
         {
             for (int i = 0; i < bitmons.Length ; i+=1)
             {
@@ -110,6 +124,8 @@ namespace Project_7
                 }
                 else
                 {
+                    Console.Write("{0} a elegido a:", nombreJugador);
+                    Console.Write("{0}",bitmons[imputInt].nombre);
                     return (imputInt);
                     
                 }
