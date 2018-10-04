@@ -15,7 +15,7 @@ namespace Project_7
             Console.Write("BOLLYWOOD SHOWDOWN");//titulo tentativo
             Console.CursorLeft = (Console.WindowWidth /2 - "Presione cualquier tecla para continuar".Length/2);
             Console.CursorTop = (Console.WindowHeight *3 / 4);
-            Console.Write("Presione cualquier tecla para continuar");
+            Console.Write("Presione cualquier tecla para continuar\n");
             Console.ReadKey(true);
         }
 
