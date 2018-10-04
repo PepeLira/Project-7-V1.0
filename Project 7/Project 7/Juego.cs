@@ -10,20 +10,20 @@ namespace Project_7
     {
         private Jugador jugador1;
         private Jugador jugador2;
-        private List<Bitmon> bitmons;
+        private List<Bitmon> bitmons = new List<Bitmon>();
 
         public Juego()
         {
             bitmons.Add(new RobinWilliams());
-            //bitmons.Add(new Brad_Pitt ());
-            //bitmons.Add(new SigourneyWeaver());
-            //bitmons.Add(new JimCarrey());
-            //bitmons.Add(new TomHanks());
-            //bitmons.Add(new Johnny_Deep());
-            //bitmons.Add(new Natalie_Portman());
-            //bitmons.Add(new Vin_Diesel());
-            //bitmons.Add(new Leonardo_Dicaprio());
-            //bitmons.Add(new JackNicholson());
+            bitmons.Add(new Brad_Pitt ());
+            bitmons.Add(new SigourneyWeaver());
+            bitmons.Add(new JimCarrey());
+            bitmons.Add(new TomHanks());
+            bitmons.Add(new Johnny_Deep());
+            bitmons.Add(new Natalie_Portman());
+            bitmons.Add(new Vin_Diesel());
+            bitmons.Add(new Leonardo_Dicaprio());
+            bitmons.Add(new JackNicholson());
         }
         private void CrearJugadores()
         {
