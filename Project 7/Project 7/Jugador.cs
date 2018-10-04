@@ -85,7 +85,20 @@ namespace Project_7
             else if (ordenRecibida == 2) //cambiar actor
             {
                 jugadaTurno = "cambiar actor";
-                CambiarBitmon(consola.elegirBitmon(bitmons));
+                int bitmonElegido = consola.elegirBitmon(bitmons);
+                while (true)
+                {
+                    if (bitmons[bitmonElegido] == BitmonActivo)
+                    {
+                        Console.WriteLine("Actor activo, elige otro!");
+                    }
+                    else
+                    {
+                        CambiarBitmon(bitmonElegido);
+                        break;
+                    }
+                }
+                
             }
         }
     }
