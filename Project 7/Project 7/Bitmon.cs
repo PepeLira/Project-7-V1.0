@@ -22,10 +22,67 @@ namespace Project_7
 
         public void recibirAtaque(Ataque ataqueRecibido, Bitmon bitmonAgresor)// muchas opciones para hacerlo, podemos hacer que resiva el ataque elegido por el usuario 
         {
-            hp = hp - (((ataqueRecibido.potencia+(bitmonAgresor.ataque/10))*Juego.MultiplicadorTipo(bitmonAgresor.tipo, tipo))/(defensa/15));
+            if((ataqueRecibido.potencia > 0)&&(ataqueRecibido.efecto1 == "Disminuir Hp Oponente" || ataqueRecibido.efecto2 == "Disminuir Hp Oponente"))
+            {
+                hp = hp - (((ataqueRecibido.potencia + (bitmonAgresor.ataque / 10)) * Juego.MultiplicadorTipo(bitmonAgresor.tipo, tipo)) / (defensa / 15));
+            }
+            if (ataqueRecibido.efecto1 == "Disminuir Defensa Oponente" || ataqueRecibido.efecto2 == "Disminuir Defensa Oponente")
+            {
+                defensa = defensa - 15;
+            }
+            if (ataqueRecibido.efecto1 == "Disminuir Velocidad Oponente" || ataqueRecibido.efecto2 == "Disminuir Velocidad Oponente")
+            {
+                velocidad = velocidad - 15;
+            }
+            if (ataqueRecibido.efecto1 == "Disminuir Ataque Oponente" || ataqueRecibido.efecto2 == "Disminuir Ataque Oponente")
+            {
+                ataque = ataque - 15;
+            }
+            if (ataqueRecibido.efecto1 == "Dormir")
+            {
+                estado = "Dormido";
+            }
+            if (ataqueRecibido.efecto1 == "Paralizar")
+            {
+                estado = "Paralizado";
+            }
+            if (ataqueRecibido.estadoEfectuado == "Confundir")
+            {
+                estado = "Confundido";
+            }
+
         }
+
         public Ataque atacar(int ataqueElegido)
         {
+            if ((ataques[ataqueElegido].potencia > 0) && (ataques[ataqueElegido].efecto1 == "Disminuir Hp Activo" || ataques[ataqueElegido].efecto2 == "Disminuir Hp Activo") && (ataques[ataqueElegido].nombre == "Suuupeeermaaan" || ataques[ataqueElegido].nombre == "Alien Queen"))
+            {
+                hp = 0;
+            }
+            if (ataques[ataqueElegido].efecto1 == "Disminuir Defensa Activo" || ataques[ataqueElegido].efecto2 == "Disminuir Defensa Activo")
+            {
+                defensa = defensa - 15;
+            }
+            if (ataques[ataqueElegido].efecto1 == "Disminuir Velocidad Activo" || ataques[ataqueElegido].efecto2 == "Disminuir Velocidad Activo")
+            {
+                velocidad = velocidad - 15;
+            }
+            if (ataques[ataqueElegido].efecto1 == "Disminuir Ataque Activo" || ataques[ataqueElegido].efecto2 == "Disminuir Ataque Activo")
+            {
+                ataque = ataque - 15;
+            }
+            if (ataques[ataqueElegido].efecto1 == "Dormir Activo")
+            {
+                estado = "Dormido";
+            }
+            if (ataques[ataqueElegido].efecto1 == "Paralizar Activo")
+            {
+                estado = "Paralizado";
+            }
+            if (ataques[ataqueElegido].estadoEfectuado == "Confundir Activo")
+            {
+                estado = "Confundido";
+            }
             return ataques[ataqueElegido];
         }
         public void descansar()//La acción de descansar no infringe daño al bitmon enemigo, pero aumenta la estamina del 

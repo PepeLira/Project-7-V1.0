@@ -25,7 +25,7 @@ namespace Project_7
             bitmons.Add(new Leonardo_Dicaprio());
             bitmons.Add(new JackNicholson());
         }
-        private void CrearJugadores()
+        public void CrearJugadores()
         {
             Console.WriteLine("Jugador 1");
             string nombre1 = Menu.PedirNombre();
@@ -36,17 +36,20 @@ namespace Project_7
         }
         public void DesplegarBitmons()
         {
+            int count = 1;
             foreach (Bitmon bitmon in bitmons)
             {
+                Console.WriteLine("({0})",count);
                 Console.WriteLine(bitmon.nombre);
-                Console.WriteLine(bitmon.hp);
-                Console.WriteLine(bitmon.Estamina);
-                Console.WriteLine(bitmon.ataque);
-                Console.WriteLine(bitmon.defensa);
+                Console.WriteLine("HP:{0}",bitmon.hp);
+                Console.WriteLine("Estamina{0}",bitmon.Estamina);
+                Console.WriteLine("Ataque{0}", bitmon.ataque);
+                Console.WriteLine("Defensa{0}", bitmon.defensa);
                 Console.WriteLine("======================================");
+                count += 1;
             }
         }
-        private void AsignarBitmons()
+        public void AsignarBitmons()
         {
             Console.WriteLine("Jugador 1");
             jugador1.AgregarBitmon(0, bitmons[Menu.ElegirBitmon() - 1]);
