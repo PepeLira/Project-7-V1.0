@@ -17,12 +17,13 @@ namespace Project_7
         public string estado { get; set; }
         public string tipo { get; set; }
         public List<Ataque> ataques;
+        public Juego juego = new Juego();
 
         // Pepecosas: necesitamos que Bitmon reciba una instrucción, la guarde y luego la ejecute cuando los dos jugadores hayan tomado sus desiciones.
 
-        public void recibirAtaque()// muchas opciones para hacerlo, podemos hacer que resiva el ataque elegido por el usuario 
+        public void recibirAtaque(Ataque ataqueRecibido, Bitmon bitmonAgresor)// muchas opciones para hacerlo, podemos hacer que resiva el ataque elegido por el usuario 
         {
-            
+            hp = hp - (((ataqueRecibido.potencia+(bitmonAgresor.ataque/10))*juego.MultiplicadorTipo(bitmonAgresor.tipo, tipo))/(defensa/15));
         }
         public Ataque atacar(int ataqueElegido)
         {
