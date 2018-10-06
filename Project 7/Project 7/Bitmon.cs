@@ -22,15 +22,6 @@ namespace Project_7
 
         public void recibirAtaque(Ataque ataqueRecibido, Bitmon bitmonAgresor)// muchas opciones para hacerlo, podemos hacer que resiva el ataque elegido por el usuario 
         {
-            if((ataqueRecibido.potencia > 0)&&(ataqueRecibido.efecto1 == "Disminuir Hp Oponente" || ataqueRecibido.efecto2 == "Disminuir Hp Oponente"))
-            {
-                hp = hp - (((ataqueRecibido.potencia + (bitmonAgresor.ataque / 10)) * Batalla.MultiplicadorTipo(ataqueRecibido.tipo, tipo)) / (defensa / 15));
-                if(hp <= 0)
-                {
-                    hp = 0;
-                    estado = "Derrotado";
-                }
-            }
             if (ataqueRecibido.efecto1 == "Disminuir Defensa Oponente" || ataqueRecibido.efecto2 == "Disminuir Defensa Oponente")
             {
                 defensa = defensa - 15;
@@ -54,6 +45,15 @@ namespace Project_7
             if (ataqueRecibido.estadoEfectuado == "Confundir")
             {
                 estado = "Confundido";
+            }
+            if ((ataqueRecibido.potencia > 0) && (ataqueRecibido.efecto1 == "Disminuir Hp Oponente" || ataqueRecibido.efecto2 == "Disminuir Hp Oponente"))
+            {
+                hp = hp - (((ataqueRecibido.potencia + (bitmonAgresor.ataque / 10)) * Batalla.MultiplicadorTipo(ataqueRecibido.tipo, tipo)) / (defensa / 15));
+                if (hp <= 0)
+                {
+                    hp = 0;
+                    estado = "Derrotado";
+                }
             }
 
 
