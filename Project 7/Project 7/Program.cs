@@ -15,6 +15,7 @@ namespace Project_7
             juego.CrearJugadores();
             juego.DesplegarBitmons();
             juego.AsignarBitmons();
+            juego.MostrarEleccion();
             Console.ReadKey(true);
 
         }
