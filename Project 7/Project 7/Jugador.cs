@@ -14,6 +14,7 @@ namespace Project_7
         public Bitmon BitmonActivo { get; set; }
         public string jugadaTurno { get; set; }
         public int ataqueElegido;
+        public string estadoJugador = "en combate";
 
         public Jugador(string nombre)
         {
@@ -69,6 +70,38 @@ namespace Project_7
                 bitmons[posicion] = new JackNicholson();
             }
 
+        }
+        public void BitmnonDerrotado()
+        {
+            while (true)
+            {
+                int bitmonElegido = consola.elegirBitmon(bitmons, nombre);
+
+                int cont = 0;
+
+                for (int i = 0; i < 3; i += 1)
+                {
+                    if (bitmons[i].hp == 0)
+                    {
+                        cont += 1;
+                    }
+                }
+                if (cont == 3)
+                {
+                    estadoJugador = "Derrotado";
+                }
+
+                else if (bitmons[bitmonElegido] == BitmonActivo || bitmons[bitmonElegido].hp == 0)
+                {
+                    Console.WriteLine("Actor activo o derrotado, elige otro!");
+                }
+                else
+                {
+                    CambiarBitmon(bitmonElegido);
+                    break;
+                }
+
+            }
         }
 
         public void jugada(int ordenRecibida) // recibir la desicion tomada por el jugador por medio de la Consola

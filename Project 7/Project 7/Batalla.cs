@@ -67,7 +67,7 @@ namespace Project_7
         {
             elegirJugadorInicial(jugador1, jugador2);
 
-            while(finDePartida == false)
+            while(true)
             {
                 turno();
                 turnoDelSiguienteJugador(jugador1, jugador2);
@@ -81,6 +81,7 @@ namespace Project_7
                     if (jugador1.BitmonActivo.velocidad > jugador2.BitmonActivo.velocidad && i == 0)
                     {
                         bitmonEscuchanInstruccion(jugador1,jugador2);
+
                     }
                     else if (jugador2.BitmonActivo.velocidad > jugador1.BitmonActivo.velocidad && i == 0)
                     {
