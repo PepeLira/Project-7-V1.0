@@ -10,7 +10,7 @@ namespace Project_7
     {
         Consola consola = new Consola();
         public string nombre { get; }
-        private Bitmon[] bitmons = new Bitmon[3];
+        public Bitmon[] bitmons = new Bitmon[3];
         public Bitmon BitmonActivo { get; set; }
         public string jugadaTurno { get; set; }
         int ataqueElegido;

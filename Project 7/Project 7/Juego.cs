@@ -8,9 +8,10 @@ namespace Project_7
 {
     class Juego
     {
-        private Jugador jugador1;
-        private Jugador jugador2;
+        public Jugador jugador1;
+        public Jugador jugador2;
         private List<Bitmon> bitmons = new List<Bitmon>();
+        Consola consola = new Consola();
 
         public Juego()
         {
@@ -63,8 +64,10 @@ namespace Project_7
             jugador1.AgregarBitmon(2, bitmons[Consola.ElegirBitmon(bitmons) - 1]);
             Console.WriteLine("Jugador 2");
             jugador2.AgregarBitmon(2, bitmons[Consola.ElegirBitmon(bitmons) - 1]);
+            consola.mostrarEquipos(jugador1,jugador2);
         }
         
+
 
     }
 }

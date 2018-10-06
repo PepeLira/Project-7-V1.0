@@ -53,6 +53,27 @@ namespace Project_7
                 }
             }
         }
+        public void mostrarEquipos(Jugador jugador1, Jugador jugador2)
+        {
+
+            Console.WriteLine("Equipo del Jugador 1");
+            for (int i = 0; i < jugador1.bitmons.Length; i += 1)
+            {
+                Console.WriteLine("Numero Actor : [{0}]", i);
+                Console.WriteLine("Nombre Actor: {0}", jugador1.bitmons[i].nombre);
+                Console.WriteLine("  ==========================================");
+            }
+            Console.ReadKey();
+
+            Console.WriteLine("Equipo del Jugador 2");
+            for (int i = 0; i < jugador2.bitmons.Length; i += 1)
+            {
+                Console.WriteLine("Numero Actor : [{0}]", i);
+                Console.WriteLine("Nombre Actor: {0}", jugador2.bitmons[i].nombre);
+                Console.WriteLine("  ==========================================");
+            }
+            Console.ReadKey();
+        }
 
         public int preguntarAccionTurno(string nombreJugador)
         {

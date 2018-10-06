@@ -16,7 +16,6 @@ namespace Project_7
             juego.DesplegarBitmons();
             juego.AsignarBitmons();
             Console.ReadKey(true);
-
         }
     }
 }
