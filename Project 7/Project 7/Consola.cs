@@ -98,7 +98,7 @@ namespace Project_7
                     {
                         while (true)
                         {
-                            Console.WriteLine("Estas seguro?(y/n)");
+                            Console.WriteLine("Estas seguro de Descansar?(y/n)");
                             string resp = Console.ReadLine();
                             if (resp == "s" || resp == "y" || resp == "si" || resp == "yes")
                             {
@@ -121,6 +121,11 @@ namespace Project_7
                     {
                         Console.Write("{0} a elegido :", nombreJugador);
                         Console.Write("Cambiar Actor");
+                    }
+                    else
+                    {
+                        Console.WriteLine("{0} no es una eleccion valida.", imputInt);
+                        continue;
                     }
                     return (imputInt);
                 }
@@ -162,7 +167,7 @@ namespace Project_7
                 }
                 else if(imputInt == 9)
                 {
-                    preguntarAccionTurno(nombreJugador);
+                    return (imputInt);
                 }
                 else
                 {
@@ -218,14 +223,18 @@ namespace Project_7
                 }
                 else if (imputInt == 9)
                 {
-                    preguntarAccionTurno(nombreJugador);
+                    return (imputInt);
                 }
-                else
+                else if(imputInt <= 3 || imputInt >= 0)
                 {
                     Console.Write("{0} a elegido a:", nombreJugador);
                     Console.Write("{0}",bitmons[imputInt].nombre);
-                    return (imputInt);
-                    
+                    return (imputInt);    
+                }
+                else
+                {
+                    Console.WriteLine("{0} no es una eleccion valida.", imputInt);
+                    continue;
                 }
             }
             
