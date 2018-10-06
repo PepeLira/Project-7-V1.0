@@ -63,8 +63,6 @@ namespace Project_7
                 Console.WriteLine("Nombre Actor: {0}", jugador1.bitmons[i].nombre);
                 Console.WriteLine("  ==========================================");
             }
-            Console.ReadKey();
-
             Console.WriteLine("Equipo del Jugador 2");
             for (int i = 0; i < jugador2.bitmons.Length; i += 1)
             {
@@ -77,9 +75,10 @@ namespace Project_7
 
         public int preguntarAccionTurno(string nombreJugador)
         {
-            Console.Write("Turno de {0}, desea:\n [0] Atacar\n [1] Descansar\n [2] Cambiar Actor\n", nombreJugador);
+            
             while (true)
             {
+                Console.Write("Turno de {0}, desea:\n [0] Atacar\n [1] Descansar\n [2] Cambiar Actor\n", nombreJugador);
                 string imput = Console.ReadLine();
                 int imputInt;
                 if (!int.TryParse(imput, out imputInt))
@@ -89,17 +88,38 @@ namespace Project_7
                 }
                 else
                 {
-                    Console.Write("{0} a elegido :", nombreJugador);
+                    
                     if(imputInt == 0)
                     {
+                        Console.Write("{0} a elegido :", nombreJugador);
                         Console.Write("Atacar");
                     }
                     else if (imputInt == 1)
                     {
-                        Console.Write("Descansar");
+                        while (true)
+                        {
+                            Console.WriteLine("Estas seguro?(y/n)");
+                            string resp = Console.ReadLine();
+                            if (resp == "s" || resp == "y" || resp == "si" || resp == "yes")
+                            {
+                                Console.Write("{0} a elegido :", nombreJugador);
+                                Console.Write("Descansar");
+                            }
+                            else if (resp == "n" || resp == "no")
+                            {
+                                break;
+                            }
+                            else
+                            {
+                                Console.WriteLine("{0} no es una eleccion valida.", resp);
+                                continue;
+                            }
+                        }
+                        
                     }
                     else if (imputInt == 2)
                     {
+                        Console.Write("{0} a elegido :", nombreJugador);
                         Console.Write("Cambiar Actor");
                     }
                     return (imputInt);
@@ -142,7 +162,7 @@ namespace Project_7
                 }
                 else if(imputInt == 9)
                 {
-                    //crear loop para volver al menu de opciones
+                    preguntarAccionTurno(nombreJugador);
                 }
                 else
                 {
@@ -198,7 +218,7 @@ namespace Project_7
                 }
                 else if (imputInt == 9)
                 {
-                    //crear loop para volver al menu de opciones
+                    preguntarAccionTurno(nombreJugador);
                 }
                 else
                 {
