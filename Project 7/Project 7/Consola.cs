@@ -39,9 +39,11 @@ namespace Project_7
                             }
                             else
                             {
+                                Console.WriteLine("Elije un actor");
+                                input = Console.ReadLine();
                                 continue;
                             }
-                        }
+                        } 
                     Console.WriteLine("Actor fuera de rango.Introducelo de nuevo.");
                 }
             }
