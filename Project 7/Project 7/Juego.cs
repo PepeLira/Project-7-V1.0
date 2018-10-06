@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace Project_7
 {
-    class Juego
+    [Serializable()]
+    class Juego: ISerializable
     {
         private Jugador jugador1;
         private Jugador jugador2;
@@ -70,6 +73,19 @@ namespace Project_7
             Console.WriteLine("Jugador 2");
             jugador2.AgregarBitmon(2, bitmons[Consola.ElegirBitmon(bitmons) - 1]);
             Console.WriteLine("Jugador 2 a elegido a {0}", jugador1.bitmons[2].nombre);
+        }
+
+        public void GetObjectData(SerializationInfo info, StreamingContext context)
+        {
+            info.AddValue("Jugador1", jugador1);
+            info.AddValue("Jugador2", jugador2);
+            info.AddValue("Bitmons", bitmons);
+        }
+
+        public Juego(SerializationInfo info, StreamingContext context)
+        {
+            //jugador1 = (Jugador)info.GetValue("Jugador1");
+            //jugador2 = (Jugador)info.GetValue("Jugador2");
         }
     }
 }
