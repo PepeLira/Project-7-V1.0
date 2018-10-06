@@ -55,11 +55,11 @@ namespace Project_7
             }
             else if (jugadorAtacante.jugadaTurno == "descasar")
             {
-
+                jugadorAtacante.BitmonActivo.descansar();
             }
             else if (jugadorAtacante.jugadaTurno == "cambiar actor")
             {
-
+                //nothing happens.
             }
         }
 

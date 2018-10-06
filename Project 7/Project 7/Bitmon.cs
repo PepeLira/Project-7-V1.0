@@ -56,6 +56,7 @@ namespace Project_7
                 estado = "Confundido";
             }
 
+
         }
 
         public Ataque atacar(int ataqueElegido)//Atacar ademas de retornar el ataque que afecta al bitmon contrario, aplica los efectos al bitmon atacante si es que los hay.
