@@ -21,17 +21,28 @@ namespace Project_7
             while (true)
             {
                 string input = Console.ReadLine();
-                if (!int.TryParse(input, out int age))
+                if (!int.TryParse(input, out int eleccion))
                 {
                     Console.WriteLine("{0} no es un numero.", input);
                     continue;
                 }
                 else
                 {
-                    if (age>0 && age< bitmons.Count()+1)
-                        return age;
+                    if (eleccion > 0 && eleccion < bitmons.Count() + 1)
+                        while (true)
+                        {
+                            Console.WriteLine("Estas seguro?(y/n)");
+                            string resp = Console.ReadLine();
+                            if (resp=="s"|| resp == "y"|| resp=="si"|| resp=="yes")
+                            {
+                                return eleccion;
+                            }
+                            else
+                            {
+                                continue;
+                            }
+                        }
                     Console.WriteLine("Actor fuera de rango.Introducelo de nuevo.");
-                    continue;
                 }
             }
         }
