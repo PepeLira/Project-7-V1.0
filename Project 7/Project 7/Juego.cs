@@ -79,13 +79,12 @@ namespace Project_7
         {
             info.AddValue("Jugador1", jugador1);
             info.AddValue("Jugador2", jugador2);
-            info.AddValue("Bitmons", bitmons);
         }
 
         public Juego(SerializationInfo info, StreamingContext context)
         {
-            //jugador1 = (Jugador)info.GetValue("Jugador1");
-            //jugador2 = (Jugador)info.GetValue("Jugador2");
+            jugador1 = (Jugador)info.GetValue("Jugador1", typeof(Jugador));
+            jugador2 = (Jugador)info.GetValue("Jugador2",typeof(Jugador));
         }
     }
 }
