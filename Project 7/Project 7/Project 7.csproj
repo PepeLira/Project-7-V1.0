@@ -54,7 +54,6 @@
     <Compile Include="Juego.cs" />
     <Compile Include="Jugador.cs" />
     <Compile Include="Actores\Leonardo Dicaprio.cs" />
-    <Compile Include="Menu.cs" />
     <Compile Include="Actores\Natalie Portman.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

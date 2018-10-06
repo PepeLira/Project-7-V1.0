@@ -10,7 +10,7 @@ namespace Project_7
     {
         static void Main(string[] args)
         {
-            Menu.PantallaInicio();
+            Consola.PantallaInicio();
             Juego juego = new Juego();
             juego.CrearJugadores();
             juego.DesplegarBitmons();
