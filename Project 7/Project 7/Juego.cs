@@ -43,9 +43,9 @@ namespace Project_7
                 Console.WriteLine("({0})",count);
                 Console.WriteLine(bitmon.nombre);
                 Console.WriteLine("HP:{0}",bitmon.hp);
-                Console.WriteLine("Estamina{0}",bitmon.Estamina);
-                Console.WriteLine("Ataque{0}", bitmon.ataque);
-                Console.WriteLine("Defensa{0}", bitmon.defensa);
+                Console.WriteLine("Estamina:{0}",bitmon.Estamina);
+                Console.WriteLine("Ataque:{0}", bitmon.ataque);
+                Console.WriteLine("Defensa:{0}", bitmon.defensa);
                 Console.WriteLine("======================================");
                 count += 1;
             }
@@ -54,15 +54,21 @@ namespace Project_7
         {
             Console.WriteLine("Jugador 1");
             jugador1.AgregarBitmon(0, bitmons[Consola.ElegirBitmon(bitmons) - 1]);
+            Console.WriteLine("Jugador 1 a elegido a {0}",jugador1.bitmons[0].nombre);
             Console.WriteLine("Jugador 2");
             jugador2.AgregarBitmon(0, bitmons[Consola.ElegirBitmon(bitmons) - 1]);
+            Console.WriteLine("Jugador 2 a elegido a {0}", jugador2.bitmons[0].nombre);
             Console.WriteLine("Jugador 2");
             jugador2.AgregarBitmon(1, bitmons[Consola.ElegirBitmon(bitmons) - 1]);
+            Console.WriteLine("Jugador 2 a elegido a {0}", jugador2.bitmons[1].nombre);
             Console.WriteLine("Jugador 1");
             jugador1.AgregarBitmon(1, bitmons[Consola.ElegirBitmon(bitmons) - 1]);
+            Console.WriteLine("Jugador 1 a elegido a {0}", jugador1.bitmons[1].nombre);
             Console.WriteLine("Jugador 1");
             jugador1.AgregarBitmon(2, bitmons[Consola.ElegirBitmon(bitmons) - 1]);
+            Console.WriteLine("Jugador 1 a elegido a {0}", jugador1.bitmons[2].nombre);
             Console.WriteLine("Jugador 2");
+            Console.WriteLine("Jugador 2 a elegido a {0}", jugador2.bitmons[2].nombre);
             jugador2.AgregarBitmon(2, bitmons[Consola.ElegirBitmon(bitmons) - 1]);
             consola.mostrarEquipos(jugador1,jugador2);
         }
