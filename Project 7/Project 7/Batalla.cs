@@ -51,7 +51,7 @@ namespace Project_7
         {
             if (jugadorAtacante.jugadaTurno == "atacar")
             {
-                jugadorAgredido.BitmonActivo.recibirAtaque(jugadorAtacante.BitmonActivo.atacar(jugadorAtacante.ataqueElegido,jugadorAtacante.BitmonActivo));
+                jugadorAgredido.BitmonActivo.recibirAtaque(jugadorAtacante.BitmonActivo.atacar(jugadorAtacante.ataqueElegido), jugadorAtacante.BitmonActivo);
             }
             else if (jugadorAtacante.jugadaTurno == "descasar")
             {
