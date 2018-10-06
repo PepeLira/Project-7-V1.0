@@ -65,38 +65,5 @@ namespace Project_7
             Console.WriteLine("Jugador 2");
             jugador2.AgregarBitmon(2, bitmons[Consola.ElegirBitmon(bitmons) - 1]);
         }
-        public void MostrarEleccion()
-        {
-            Console.WriteLine("Bitmons de {0}", jugador1.nombre);
-            for (int i = 0; i < (jugador1.bitmons).Length; i += 1)
-            {
-                Console.WriteLine("Numero Actor : [{0}]", i);
-                Console.WriteLine("Nombre Actor: {0}", (jugador1.bitmons)[i].nombre);
-                Console.WriteLine("  | Tipo | {0}", (jugador1.bitmons)[i].tipo);
-                Console.WriteLine("  | HP | {0}", (jugador1.bitmons)[i].hp);
-                Console.WriteLine("  | Estamina | {0}", (jugador1.bitmons)[i].Estamina);
-                Console.WriteLine("  | Ataque | {0}", (jugador1.bitmons)[i].ataque);
-                Console.WriteLine("  | Defensa | {0}", (jugador1.bitmons)[i].defensa);
-                Console.WriteLine("  | Velocidad | {0}", (jugador1.bitmons)[i].velocidad);
-                Console.WriteLine("  | Estado | {0}", (jugador1.bitmons)[i].estado);
-                Console.WriteLine("  ==========================================");
-            }
-            Console.WriteLine("Bitmons de {0}", jugador2.nombre);
-            for (int i = 0; i < (jugador2.bitmons).Length; i += 1)
-            {
-                Console.WriteLine("Numero Actor : [{0}]", i);
-                Console.WriteLine("Nombre Actor: {0}", (jugador2.bitmons)[i].nombre);
-                Console.WriteLine("  | Tipo | {0}", (jugador2.bitmons)[i].tipo);
-                Console.WriteLine("  | HP | {0}", (jugador2.bitmons)[i].hp);
-                Console.WriteLine("  | Estamina | {0}", (jugador2.bitmons)[i].Estamina);
-                Console.WriteLine("  | Ataque | {0}", (jugador2.bitmons)[i].ataque);
-                Console.WriteLine("  | Defensa | {0}", (jugador2.bitmons)[i].defensa);
-                Console.WriteLine("  | Velocidad | {0}", (jugador2.bitmons)[i].velocidad);
-                Console.WriteLine("  | Estado | {0}", (jugador2.bitmons)[i].estado);
-                Console.WriteLine("  ==========================================");
-            }
-        }
     }
-
-
 }
