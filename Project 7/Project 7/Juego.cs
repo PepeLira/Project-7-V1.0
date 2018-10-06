@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace Project_7
 {
-    class Juego
+    [Serializable()]
+    class Juego: ISerializable
     {
         private Jugador jugador1;
         private Jugador jugador2;
@@ -15,7 +18,7 @@ namespace Project_7
         public Juego()
         {
             bitmons.Add(new RobinWilliams());
-            bitmons.Add(new Brad_Pitt ());
+            bitmons.Add(new Brad_Pitt());
             bitmons.Add(new SigourneyWeaver());
             bitmons.Add(new JimCarrey());
             bitmons.Add(new TomHanks());
@@ -39,10 +42,11 @@ namespace Project_7
             int count = 1;
             foreach (Bitmon bitmon in bitmons)
             {
-                Console.WriteLine("({0})",count);
+                Console.WriteLine("({0})", count);
                 Console.WriteLine(bitmon.nombre);
-                Console.WriteLine("HP:{0}",bitmon.hp);
-                Console.WriteLine("Estamina{0}",bitmon.Estamina);
+                Console.WriteLine("Tipo:{0}", bitmon.tipo);
+                Console.WriteLine("HP:{0}", bitmon.hp);
+                Console.WriteLine("Estamina{0}", bitmon.Estamina);
                 Console.WriteLine("Ataque{0}", bitmon.ataque);
                 Console.WriteLine("Defensa{0}", bitmon.defensa);
                 Console.WriteLine("======================================");
@@ -53,18 +57,35 @@ namespace Project_7
         {
             Console.WriteLine("Jugador 1");
             jugador1.AgregarBitmon(0, bitmons[Consola.ElegirBitmon(bitmons) - 1]);
+            Console.WriteLine("Jugador 1 a elegido a {0}",jugador1.bitmons[0].nombre);
             Console.WriteLine("Jugador 2");
             jugador2.AgregarBitmon(0, bitmons[Consola.ElegirBitmon(bitmons) - 1]);
+            Console.WriteLine("Jugador 2 a elegido a {0}", jugador1.bitmons[0].nombre);
             Console.WriteLine("Jugador 2");
             jugador2.AgregarBitmon(1, bitmons[Consola.ElegirBitmon(bitmons) - 1]);
+            Console.WriteLine("Jugador 2 a elegido a {0}", jugador1.bitmons[1].nombre);
             Console.WriteLine("Jugador 1");
             jugador1.AgregarBitmon(1, bitmons[Consola.ElegirBitmon(bitmons) - 1]);
+            Console.WriteLine("Jugador 1 a elegido a {0}", jugador1.bitmons[1].nombre);
             Console.WriteLine("Jugador 1");
             jugador1.AgregarBitmon(2, bitmons[Consola.ElegirBitmon(bitmons) - 1]);
+            Console.WriteLine("Jugador 1 a elegido a {0}", jugador1.bitmons[2].nombre);
             Console.WriteLine("Jugador 2");
             jugador2.AgregarBitmon(2, bitmons[Consola.ElegirBitmon(bitmons) - 1]);
+            Console.WriteLine("Jugador 2 a elegido a {0}", jugador1.bitmons[2].nombre);
         }
-        
 
+        public void GetObjectData(SerializationInfo info, StreamingContext context)
+        {
+            info.AddValue("Jugador1", jugador1);
+            info.AddValue("Jugador2", jugador2);
+            info.AddValue("Bitmons", bitmons);
+        }
+
+        public Juego(SerializationInfo info, StreamingContext context)
+        {
+            //jugador1 = (Jugador)info.GetValue("Jugador1");
+            //jugador2 = (Jugador)info.GetValue("Jugador2");
+        }
     }
 }
