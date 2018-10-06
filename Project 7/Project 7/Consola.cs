@@ -37,10 +37,15 @@ namespace Project_7
                             {
                                 return eleccion;
                             }
-                            else
+                            else if (resp == "n" ||  resp == "no")
                             {
                                 Console.WriteLine("Elije un actor");
                                 input = Console.ReadLine();
+                                continue;
+                            }
+                            else
+                            {
+                                Console.WriteLine("{0} no es una eleccion valida.", resp);
                                 continue;
                             }
                         } 
