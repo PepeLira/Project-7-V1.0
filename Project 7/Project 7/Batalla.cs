@@ -47,17 +47,17 @@ namespace Project_7
             }
         }
 
-        void bitmonEscuchanInstruccion(Jugador jugador) //pepe cosas: Bitmon tiene que poder activar metodo de recivir daño en su oponente 
+        void bitmonEscuchanInstruccion(Jugador jugadorAtacante, Jugador jugadorAgredido) //pepe cosas: Bitmon tiene que poder activar metodo de recivir daño en su oponente 
         {
-            if (jugador.jugadaTurno == "atacar")
+            if (jugadorAtacante.jugadaTurno == "atacar")
+            {
+                jugadorAgredido.BitmonActivo.recibirAtaque(jugadorAtacante.BitmonActivo.atacar(jugadorAtacante.ataqueElegido,jugadorAtacante.BitmonActivo));
+            }
+            else if (jugadorAtacante.jugadaTurno == "descasar")
             {
 
             }
-            else if (jugador.jugadaTurno == "descasar")
-            {
-
-            }
-            else if (jugador.jugadaTurno == "cambiar actor")
+            else if (jugadorAtacante.jugadaTurno == "cambiar actor")
             {
 
             }
@@ -80,19 +80,19 @@ namespace Project_7
                 {
                     if (jugador1.BitmonActivo.velocidad > jugador2.BitmonActivo.velocidad && i == 0)
                     {
-                        bitmonEscuchanInstruccion(jugador1);
+                        bitmonEscuchanInstruccion(jugador1,jugador2);
                     }
                     else if (jugador2.BitmonActivo.velocidad > jugador1.BitmonActivo.velocidad && i == 0)
                     {
-                        bitmonEscuchanInstruccion(jugador2);
+                        bitmonEscuchanInstruccion(jugador2,jugador1);
                     }
                     if (jugador1.BitmonActivo.velocidad > jugador2.BitmonActivo.velocidad && i == 1)
                     {
-                        bitmonEscuchanInstruccion(jugador2);
+                        bitmonEscuchanInstruccion(jugador2,jugador1);
                     }
                     else if (jugador2.BitmonActivo.velocidad > jugador1.BitmonActivo.velocidad && i == 1)
                     {
-                        bitmonEscuchanInstruccion(jugador1);
+                        bitmonEscuchanInstruccion(jugador1,jugador2);
                     }
 
                 }

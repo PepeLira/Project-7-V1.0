@@ -13,7 +13,7 @@ namespace Project_7
         private Bitmon[] bitmons = new Bitmon[3];
         public Bitmon BitmonActivo { get; set; }
         public string jugadaTurno { get; set; }
-        int ataqueElegido;
+        public int ataqueElegido;
 
         public Jugador(string nombre)
         {
