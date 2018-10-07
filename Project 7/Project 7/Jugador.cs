@@ -69,9 +69,11 @@ namespace Project_7
             {
                 bitmons[posicion] = new JackNicholson();
             }
-
         }
-        public void BitmnonDerrotado()
+
+
+
+        public void BitmonDerrotado()
         {
             while (true)
             {
@@ -104,6 +106,7 @@ namespace Project_7
 
             }
         }
+
 
         public void jugada(int ordenRecibida) // recibir la desicion tomada por el jugador por medio de la Consola
         {

@@ -63,6 +63,25 @@ namespace Project_7
             }
         }
 
+        Jugador revisarEstado(Jugador jugadorAtacante, Jugador jugadorAgredido)
+        {
+            jugadorAgredido.BitmonDerrotado();
+            jugadorAtacante.BitmonDerrotado();
+
+            if (jugadorAgredido.estadoJugador == "Derrotado")
+            {
+                return jugadorAtacante;
+            }
+            else if (jugadorAtacante.estadoJugador == "Derrotado")
+            {
+                return jugadorAgredido;
+            }
+            else
+            {
+                return null;
+            }
+        }
+
         public Jugador iniciarBatalla(Jugador jugador1, Jugador jugador2)
         {
             elegirJugadorInicial(jugador1, jugador2);
@@ -76,30 +95,53 @@ namespace Project_7
 
                 //Bitmons ejecutan acciones
 
-                for (int i = 0; i < 2; i += 1)
+                int i = 0;
+                while ( i < 2)
                 {
                     if (jugador1.BitmonActivo.velocidad > jugador2.BitmonActivo.velocidad && i == 0)
                     {
                         bitmonEscuchanInstruccion(jugador1,jugador2);
-
+                        if (revisarEstado(jugador1, jugador2) != null)
+                        {
+                            jugadorGanador = revisarEstado(jugador1, jugador2);
+                            break;
+                        }
                     }
                     else if (jugador2.BitmonActivo.velocidad > jugador1.BitmonActivo.velocidad && i == 0)
                     {
                         bitmonEscuchanInstruccion(jugador2,jugador1);
+                        if (revisarEstado(jugador1, jugador2) != null)
+                        {
+                            jugadorGanador = revisarEstado(jugador1, jugador2);
+                            break;
+                        }
                     }
                     if (jugador1.BitmonActivo.velocidad > jugador2.BitmonActivo.velocidad && i == 1)
                     {
                         bitmonEscuchanInstruccion(jugador2,jugador1);
+                        if (revisarEstado(jugador1, jugador2) != null)
+                        {
+                            jugadorGanador = revisarEstado(jugador1, jugador2);
+                            break;
+                        }
                     }
                     else if (jugador2.BitmonActivo.velocidad > jugador1.BitmonActivo.velocidad && i == 1)
                     {
                         bitmonEscuchanInstruccion(jugador1,jugador2);
+                        if (revisarEstado(jugador1, jugador2) != null)
+                        {
+                            jugadorGanador = revisarEstado(jugador1, jugador2);
+                            break;
+                        }
                     }
 
+                    i += 1;
                 }
-
+                if (jugadorGanador != null)
+                {
+                    break;
+                }
             }
-
             return jugadorGanador;
         }
 
