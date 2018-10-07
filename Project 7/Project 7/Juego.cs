@@ -17,7 +17,7 @@ namespace Project_7
         private Jugador jugador2;
         private List<Bitmon> bitmons = new List<Bitmon>();
 
-        public Juego()
+        public void CrearBitmons()
         {
             bitmons.Add(new RobinWilliams());
             bitmons.Add(new Brad_Pitt());
