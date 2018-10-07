@@ -10,7 +10,6 @@ namespace Project_7
     {
         Consola consola = new Consola();
         Jugador jugadorActivo;
-        bool finDePartida = false;
         Jugador jugadorGanador;
         
 

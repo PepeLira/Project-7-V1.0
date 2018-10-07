@@ -15,6 +15,7 @@ namespace Project_7
         {
             Consola.PantallaInicio();
             Juego juego = new Juego();
+            juego.Batalla();
             Console.ReadKey(true);
         }
     }
