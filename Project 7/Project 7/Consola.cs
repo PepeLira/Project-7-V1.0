@@ -71,6 +71,7 @@ namespace Project_7
                 Console.WriteLine("  ==========================================");
             }
             Console.ReadKey();
+            System.Console.Clear();
         }
 
         public int preguntarAccionTurno(string nombreJugador)
@@ -78,8 +79,10 @@ namespace Project_7
             
             while (true)
             {
+                System.Console.Clear();
                 Console.WriteLine("Turno de {0}, desea:\n [0] Atacar\n [1] Descansar\n [2] Cambiar Actor\n", nombreJugador);
                 string imput = Console.ReadLine();
+                System.Console.Clear();
                 int imputInt;
                 if (!int.TryParse(imput, out imputInt))
                 {
@@ -162,6 +165,7 @@ namespace Project_7
             while (true)
             {
                 string imput = Console.ReadLine();
+                System.Console.Clear();
                 int imputInt;
                 if (!int.TryParse(imput, out imputInt))
                 {
@@ -218,6 +222,7 @@ namespace Project_7
             while (true)
             {
                 string imput = Console.ReadLine();
+                System.Console.Clear();
                 int imputInt;
                 if (!int.TryParse(imput, out imputInt))
                 {

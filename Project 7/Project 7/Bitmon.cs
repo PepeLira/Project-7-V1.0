@@ -104,7 +104,7 @@ namespace Project_7
             return ataques[ataqueElegido];
         }
         public void descansar()//La acción de descansar no infringe daño al bitmon enemigo, pero aumenta la estamina del 
-        {                       //bitmon actual y además la defensa.
+        {                      //bitmon actual y además la defensa.
             Estamina += 10;
             defensa += 10;
         }
