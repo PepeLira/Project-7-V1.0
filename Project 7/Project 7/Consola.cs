@@ -93,6 +93,7 @@ namespace Project_7
                     {
                         Console.Write("{0} a elegido :", nombreJugador);
                         Console.Write("Atacar");
+                        return (imputInt);
                     }
                     else if (imputInt == 1)
                     {
