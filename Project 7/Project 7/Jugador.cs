@@ -3,10 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.IO;
+using System.Xml.Serialization;
 
 namespace Project_7
 {
-    class Jugador
+    [Serializable()]
+    class Jugador : ISerializable
     {
         Consola consola = new Consola();
         public string nombre { get; }
@@ -135,6 +140,25 @@ namespace Project_7
                 }
                 
             }
+        }
+
+        public void GetObjectData(SerializationInfo info, StreamingContext context)
+        {
+            info.AddValue("Nombre", nombre);
+            info.AddValue("Bitmons", bitmons);
+            info.AddValue("BitmonActivo", BitmonActivo);
+            info.AddValue("JugadaTurno", jugadaTurno);
+            info.AddValue("AtaqueElegido", ataqueElegido);
+            info.AddValue("EstadoJugador", estadoJugador);
+        }
+        public Jugador(SerializationInfo info, StreamingContext context)
+        {
+            nombre = (string)info.GetValue("Nombre", typeof(string));
+            bitmons = (Bitmon[])info.GetValue("Bitmons", typeof(Bitmon[]));
+            BitmonActivo = (Bitmon)info.GetValue("BitmonActivo", typeof(Bitmon));
+            jugadaTurno = (string)info.GetValue("JugadaTurno", typeof(string));
+            ataqueElegido = (int)info.GetValue("AtaqueElegido", typeof(int));
+            estadoJugador = (string)info.GetValue("EstadoJugador", typeof(string));
         }
     }
 }
