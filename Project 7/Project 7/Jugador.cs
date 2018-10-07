@@ -145,6 +145,21 @@ namespace Project_7
             }
         }
 
+        public void GuardarJugador1(Juego jugador)
+        {
+            Stream stream = File.Open("Jugador1.dat", FileMode.Create);
+            BinaryFormatter bf = new BinaryFormatter();
+            bf.Serialize(stream, jugador);
+            stream.Close();
+        }
+        public void GuardarJugador2(Juego jugador)
+        {
+            Stream stream = File.Open("Jugador2.dat", FileMode.Create);
+            BinaryFormatter bf = new BinaryFormatter();
+            bf.Serialize(stream, jugador);
+            stream.Close();
+        }
+
         public void GetObjectData(SerializationInfo info, StreamingContext context)
         {
             info.AddValue("Nombre", nombre);

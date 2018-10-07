@@ -16,7 +16,15 @@ namespace Project_7
         private Jugador jugador1;
         private Jugador jugador2;
         private List<Bitmon> bitmons = new List<Bitmon>();
-
+        
+        public Juego()
+        {
+            CrearBitmons();
+            CrearJugadores();
+            DesplegarBitmons();
+            AsignarBitmons();
+        }
+        
         public void CrearBitmons()
         {
             bitmons.Add(new RobinWilliams());
@@ -75,6 +83,11 @@ namespace Project_7
             Console.WriteLine("Jugador 2");
             jugador2.AgregarBitmon(2, bitmons[Consola.ElegirBitmon(bitmons) - 1]);
             Console.WriteLine("Jugador 2 a elegido a {0}", jugador1.bitmons[2].nombre);
+        }
+        public void Batalla()
+        {
+            Batalla batalla = new Batalla();
+            batalla.iniciarBatalla(jugador1, jugador2);
         }
 
         public void GuardarJuego(Juego juego)
