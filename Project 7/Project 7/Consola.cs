@@ -17,7 +17,7 @@ namespace Project_7
 
         public static int ElegirBitmon(List<Bitmon> bitmons)
         {
-            Console.WriteLine("Elije un actor");
+            Console.WriteLine("Elige un actor");
             while (true)
             {
                 string input = Console.ReadLine();
@@ -39,7 +39,7 @@ namespace Project_7
                             }
                             else if (resp == "n" ||  resp == "no")
                             {
-                                Console.WriteLine("Elije un actor");
+                                Console.WriteLine("Elige un actor");
                                 input = Console.ReadLine();
                                 continue;
                             }
