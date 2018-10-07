@@ -78,7 +78,7 @@ namespace Project_7
             
             while (true)
             {
-                Console.Write("Turno de {0}, desea:\n [0] Atacar\n [1] Descansar\n [2] Cambiar Actor\n", nombreJugador);
+                Console.WriteLine("Turno de {0}, desea:\n [0] Atacar\n [1] Descansar\n [2] Cambiar Actor\n", nombreJugador);
                 string imput = Console.ReadLine();
                 int imputInt;
                 if (!int.TryParse(imput, out imputInt))
@@ -92,7 +92,7 @@ namespace Project_7
                     if(imputInt == 0)
                     {
                         Console.Write("{0} a elegido :", nombreJugador);
-                        Console.Write("Atacar");
+                        Console.WriteLine("Atacar");
                         return (imputInt);
                     }
                     else if (imputInt == 1)
@@ -103,8 +103,8 @@ namespace Project_7
                             string resp = Console.ReadLine();
                             if (resp == "s" || resp == "y" || resp == "si" || resp == "yes")
                             {
-                                Console.Write("{0} a elegido :", nombreJugador);
-                                Console.Write("Descansar");
+                                Console.WriteLine("{0} a elegido :", nombreJugador);
+                                Console.WriteLine("Descansar");
                                 return (imputInt);
                             }
                             else if (resp == "n" || resp == "no")
@@ -121,8 +121,8 @@ namespace Project_7
                     }
                     else if (imputInt == 2)
                     {
-                        Console.Write("{0} a elegido :", nombreJugador);
-                        Console.Write("Cambiar Actor");
+                        Console.WriteLine("{0} a elegido :", nombreJugador);
+                        Console.WriteLine("Cambiar Actor");
                         return (imputInt);
                     }
                     else
@@ -174,8 +174,8 @@ namespace Project_7
                 }
                 else
                 {
-                    Console.Write("{0} a elegido atacar con :", nombreJugador);
-                    Console.Write("{0}", ataquesBitmonActivo[imputInt]);
+                    Console.WriteLine("{0} a elegido atacar con :", nombreJugador);
+                    Console.WriteLine("{0}", ataquesBitmonActivo[imputInt].nombre);
                     return (imputInt);
                 }
             }
@@ -230,8 +230,8 @@ namespace Project_7
                 }
                 else if(imputInt <= 3 || imputInt >= 0)
                 {
-                    Console.Write("{0} a elegido a:", nombreJugador);
-                    Console.Write("{0}",bitmons[imputInt].nombre);
+                    Console.WriteLine("{0} a elegido a:", nombreJugador);
+                    Console.WriteLine("{0}",bitmons[imputInt].nombre);
                     return (imputInt);    
                 }
                 else
