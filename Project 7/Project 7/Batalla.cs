@@ -83,12 +83,15 @@ namespace Project_7
 
         public Jugador iniciarBatalla(Jugador jugador1, Jugador jugador2)
         {
+
             elegirJugadorInicial(jugador1, jugador2);
 
             while(true)
             {
+                consola.MostrarBitmonActivo(jugadorActivo.BitmonActivo);
                 turno();
                 turnoDelSiguienteJugador(jugador1, jugador2);
+                consola.MostrarBitmonActivo(jugadorActivo.BitmonActivo);
                 turno();
                 turnoDelSiguienteJugador(jugador1, jugador2);
 

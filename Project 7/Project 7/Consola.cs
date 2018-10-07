@@ -79,7 +79,7 @@ namespace Project_7
             
             while (true)
             {
-                System.Console.Clear();
+                
                 Console.WriteLine("Turno de {0}, desea:\n [0] Atacar\n [1] Descansar\n [2] Cambiar Actor\n", nombreJugador);
                 string imput = Console.ReadLine();
                 System.Console.Clear();
@@ -142,6 +142,7 @@ namespace Project_7
             int cont = 0;
             foreach (Ataque ataque in ataquesBitmonActivo)
             {
+
                 Console.WriteLine("Indice : [{0}]",cont);
                 Console.WriteLine("Nombre Ataque: {0}", ataque.nombre);
                 Console.WriteLine("  ==========================================");
@@ -247,6 +248,28 @@ namespace Project_7
             }
             
         }
+        public void MostrarBitmonActivo(Bitmon bitmonActivo)
+        {
+            System.Console.Clear();
+            Console.WriteLine("===================Actor en Escena ================");
+            Console.WriteLine("Nombre Actor: {0}", bitmonActivo.nombre);
+            Console.WriteLine("  ==========================================");
+            Console.WriteLine("  | Tipo | {0}", bitmonActivo.tipo);
+            Console.WriteLine("  ==========================================");
+            Console.WriteLine("  | HP | {0}", bitmonActivo.hp);
+            Console.WriteLine("  ==========================================");
+            Console.WriteLine("  | Estamina | {0}", bitmonActivo.Estamina);
+            Console.WriteLine("  ==========================================");
+            Console.WriteLine("  | Ataque | {0}", bitmonActivo.ataque);
+            Console.WriteLine("  ==========================================");
+            Console.WriteLine("  | Defensa | {0}", bitmonActivo.defensa);
+            Console.WriteLine("  ==========================================");
+            Console.WriteLine("  | Velocidad | {0}", bitmonActivo.velocidad);
+            Console.WriteLine("  ==========================================");
+            Console.WriteLine("  | Estado | {0}", bitmonActivo.estado);
+            Console.WriteLine("  ==========================================");
+        }
+
         public static void PantallaInicio()
         {
             Console.Write(@"OOOOOOOOOOOKXXNNXXKK0xodooodooooooooooodooooooooolllllccc::::;;;;;;;;,,,,,,,,,,cOOdl:cdxkkodOOkxkOOO
