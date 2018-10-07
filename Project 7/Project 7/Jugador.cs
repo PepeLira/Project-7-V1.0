@@ -89,6 +89,7 @@ namespace Project_7
                 if (cont == 3)
                 {
                     estadoJugador = "Derrotado";
+                    break;
                 }
 
                 else if (bitmons[bitmonElegido] == BitmonActivo || bitmons[bitmonElegido].hp == 0)
