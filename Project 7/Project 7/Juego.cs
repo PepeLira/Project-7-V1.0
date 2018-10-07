@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
+using System.IO;
+using System.Xml.Serialization;
 
 namespace Project_7
 {
@@ -73,6 +75,24 @@ namespace Project_7
             Console.WriteLine("Jugador 2");
             jugador2.AgregarBitmon(2, bitmons[Consola.ElegirBitmon(bitmons) - 1]);
             Console.WriteLine("Jugador 2 a elegido a {0}", jugador1.bitmons[2].nombre);
+        }
+
+        public void GuardarJuego(Juego juego)
+        {
+            Stream stream = File.Open("JuegoGuardado.dat", FileMode.Create);
+            BinaryFormatter bf = new BinaryFormatter();
+            bf.Serialize(stream, juego);
+            stream.Close();
+        }
+
+        public Juego RecuperarJuego()
+        {
+            Juego juego;
+            Stream stream = File.Open("JuegoGuardado.dat", FileMode.Open);
+            BinaryFormatter bf = new BinaryFormatter();
+            juego = (Juego)bf.Deserialize(stream);
+            stream.Close();
+            return juego;
         }
 
         public void GetObjectData(SerializationInfo info, StreamingContext context)

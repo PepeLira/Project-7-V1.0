@@ -61,7 +61,7 @@ namespace Project_7
 
         public Ataque atacar(int ataqueElegido)//Atacar ademas de retornar el ataque que afecta al bitmon contrario, aplica los efectos al bitmon atacante si es que los hay.
         {
-            if ((ataques[ataqueElegido].potencia > 0) && (ataques[ataqueElegido].efecto1 == "Disminuir Hp Activo" || ataques[ataqueElegido].efecto2 == "Disminuir Hp Activo") && (ataques[ataqueElegido].nombre == "Suuupeeermaaan" || ataques[ataqueElegido].nombre == "Alien Queen"))
+            if ((ataques[ataqueElegido].potencia > 0) && ((ataques[ataqueElegido].efecto1 == "Disminuir Hp Activo" || ataques[ataqueElegido].efecto2 == "Disminuir Hp Activo")) && (ataques[ataqueElegido].nombre == "Suuupeeermaaan" || ataques[ataqueElegido].nombre == "Alien Queen"))
             {
                 hp = 0;
             }
