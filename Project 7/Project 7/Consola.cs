@@ -104,6 +104,7 @@ namespace Project_7
                             {
                                 Console.Write("{0} a elegido :", nombreJugador);
                                 Console.Write("Descansar");
+                                break;
                             }
                             else if (resp == "n" || resp == "no")
                             {
