@@ -23,6 +23,7 @@ namespace Project_7
             CrearJugadores();
             DesplegarBitmons();
             AsignarBitmons();
+            Console.Clear();
         }
         
         public void CrearBitmons()
@@ -56,33 +57,33 @@ namespace Project_7
                 Console.WriteLine(bitmon.nombre);
                 Console.WriteLine("Tipo:{0}", bitmon.tipo);
                 Console.WriteLine("HP:{0}", bitmon.hp);
-                Console.WriteLine("Estamina{0}", bitmon.Estamina);
-                Console.WriteLine("Ataque{0}", bitmon.ataque);
-                Console.WriteLine("Defensa{0}", bitmon.defensa);
+                Console.WriteLine("Estamina:{0}", bitmon.Estamina);
+                Console.WriteLine("Ataque:{0}", bitmon.ataque);
+                Console.WriteLine("Defensa:{0}", bitmon.defensa);
                 Console.WriteLine("======================================");
                 count += 1;
             }
         }
         public void AsignarBitmons()
         {
-            Console.WriteLine("Jugador 1");
+            Console.WriteLine("Turno de {0} de elegir:",jugador1.nombre);
             jugador1.AgregarBitmon(0, bitmons[Consola.ElegirBitmon(bitmons) - 1]);
             Console.WriteLine("{0} a elegido a {1}", jugador1.nombre, jugador1.bitmons[0].nombre);
             jugador1.BitmonActivo = jugador1.bitmons[0];
-            Console.WriteLine("Jugador 2");
+            Console.WriteLine("Turno de {0} de elegir:", jugador2.nombre);
             jugador2.AgregarBitmon(0, bitmons[Consola.ElegirBitmon(bitmons) - 1]);
             Console.WriteLine("{0} a elegido a {1}", jugador2.nombre, jugador2.bitmons[0].nombre);
             jugador2.BitmonActivo = jugador2.bitmons[0];
-            Console.WriteLine("Jugador 2");
+            Console.WriteLine("Turno de {0} de elegir:", jugador2.nombre);
             jugador2.AgregarBitmon(1, bitmons[Consola.ElegirBitmon(bitmons) - 1]);
             Console.WriteLine("{0} a elegido a {1}", jugador2.nombre, jugador2.bitmons[1].nombre);
-            Console.WriteLine("Jugador 1");
+            Console.WriteLine("Turno de {0} de elegir:", jugador1.nombre);
             jugador1.AgregarBitmon(1, bitmons[Consola.ElegirBitmon(bitmons) - 1]);
             Console.WriteLine("{0} a elegido a {1}", jugador1.nombre, jugador1.bitmons[1].nombre);
-            Console.WriteLine("Jugador 1");
+            Console.WriteLine("Turno de {0} de elegir:", jugador1.nombre);
             jugador1.AgregarBitmon(2, bitmons[Consola.ElegirBitmon(bitmons) - 1]);
             Console.WriteLine("{0} a elegido a {1}", jugador1.nombre, jugador1.bitmons[2].nombre);
-            Console.WriteLine("Jugador 2");
+            Console.WriteLine("Turno de {0} de elegir:", jugador2.nombre);
             jugador2.AgregarBitmon(2, bitmons[Consola.ElegirBitmon(bitmons) - 1]);
             Console.WriteLine("{0} a elegido a {1}",jugador2.nombre ,jugador2.bitmons[2].nombre);
         }
