@@ -104,7 +104,7 @@ namespace Project_7
                             {
                                 Console.Write("{0} a elegido :", nombreJugador);
                                 Console.Write("Descansar");
-                                break;
+                                return (imputInt);
                             }
                             else if (resp == "n" || resp == "no")
                             {
@@ -122,13 +122,14 @@ namespace Project_7
                     {
                         Console.Write("{0} a elegido :", nombreJugador);
                         Console.Write("Cambiar Actor");
+                        return (imputInt);
                     }
                     else
                     {
                         Console.WriteLine("{0} no es una eleccion valida.", imputInt);
                         continue;
                     }
-                    return (imputInt);
+                    
                 }
             }
         }
