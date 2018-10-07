@@ -70,10 +70,10 @@ namespace Project_7
             Console.WriteLine("Jugador 1 a elegido a {0}",jugador1.bitmons[0].nombre);
             Console.WriteLine("Jugador 2");
             jugador2.AgregarBitmon(0, bitmons[Consola.ElegirBitmon(bitmons) - 1]);
-            Console.WriteLine("Jugador 2 a elegido a {0}", jugador1.bitmons[0].nombre);
+            Console.WriteLine("Jugador 2 a elegido a {0}", jugador2.bitmons[0].nombre);
             Console.WriteLine("Jugador 2");
             jugador2.AgregarBitmon(1, bitmons[Consola.ElegirBitmon(bitmons) - 1]);
-            Console.WriteLine("Jugador 2 a elegido a {0}", jugador1.bitmons[1].nombre);
+            Console.WriteLine("Jugador 2 a elegido a {0}", jugador2.bitmons[1].nombre);
             Console.WriteLine("Jugador 1");
             jugador1.AgregarBitmon(1, bitmons[Consola.ElegirBitmon(bitmons) - 1]);
             Console.WriteLine("Jugador 1 a elegido a {0}", jugador1.bitmons[1].nombre);
@@ -82,7 +82,7 @@ namespace Project_7
             Console.WriteLine("Jugador 1 a elegido a {0}", jugador1.bitmons[2].nombre);
             Console.WriteLine("Jugador 2");
             jugador2.AgregarBitmon(2, bitmons[Consola.ElegirBitmon(bitmons) - 1]);
-            Console.WriteLine("Jugador 2 a elegido a {0}", jugador1.bitmons[2].nombre);
+            Console.WriteLine("Jugador 2 a elegido a {0}", jugador2.bitmons[2].nombre);
         }
         public void Batalla()
         {
