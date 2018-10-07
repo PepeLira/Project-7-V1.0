@@ -68,9 +68,11 @@ namespace Project_7
             Console.WriteLine("Jugador 1");
             jugador1.AgregarBitmon(0, bitmons[Consola.ElegirBitmon(bitmons) - 1]);
             Console.WriteLine("{0} a elegido a {1}", jugador1.nombre, jugador1.bitmons[0].nombre);
+            jugador1.BitmonActivo = jugador1.bitmons[0];
             Console.WriteLine("Jugador 2");
             jugador2.AgregarBitmon(0, bitmons[Consola.ElegirBitmon(bitmons) - 1]);
             Console.WriteLine("{0} a elegido a {1}", jugador2.nombre, jugador2.bitmons[0].nombre);
+            jugador2.BitmonActivo = jugador2.bitmons[0];
             Console.WriteLine("Jugador 2");
             jugador2.AgregarBitmon(1, bitmons[Consola.ElegirBitmon(bitmons) - 1]);
             Console.WriteLine("{0} a elegido a {1}", jugador2.nombre, jugador2.bitmons[1].nombre);
