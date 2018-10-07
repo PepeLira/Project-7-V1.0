@@ -29,7 +29,7 @@ namespace Project_7
             }
         }
 
-        public void turno()
+        void turno()
         {
             jugadorActivo.jugada(consola.preguntarAccionTurno(jugadorActivo.nombre)); // Pregunta que accion tomara en su turno
 
