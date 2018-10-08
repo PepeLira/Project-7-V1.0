@@ -71,7 +71,14 @@ namespace Project_7
         {
             if (jugadorAtacante.jugadaTurno == "atacar")
             {
-                jugadorAgredido.BitmonActivo.recibirAtaque(jugadorAtacante.BitmonActivo.atacar(jugadorAtacante.ataqueElegido), jugadorAtacante.BitmonActivo);
+                if (jugadorAtacante.BitmonActivo.atacar(jugadorAtacante.ataqueElegido) != null)
+                {
+                    jugadorAgredido.BitmonActivo.recibirAtaque(jugadorAtacante.BitmonActivo.atacar(jugadorAtacante.ataqueElegido), jugadorAtacante.BitmonActivo);
+                }
+                else
+                {
+                    jugadorAtacante.BitmonActivo.descansar();//solucion temporal
+                }
             }
             else if (jugadorAtacante.jugadaTurno == "descasar")
             {
