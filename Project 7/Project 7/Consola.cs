@@ -166,7 +166,6 @@ namespace Project_7
             while (true)
             {
                 string imput = Console.ReadLine();
-                System.Console.Clear();
                 int imputInt;
                 if (!int.TryParse(imput, out imputInt))
                 {
@@ -181,6 +180,7 @@ namespace Project_7
                 {
                     Console.WriteLine("{0} a elegido atacar con :", nombreJugador);
                     Console.WriteLine("{0}", ataquesBitmonActivo[imputInt].nombre);
+                    System.Console.Clear();
                     return (imputInt);
                 }
             }
