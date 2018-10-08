@@ -36,15 +36,15 @@ namespace Project_7
             {
                 ataque = ataque - 15;
             }
-            if (ataqueRecibido.efecto1 == "Dormir" || ataqueRecibido.efecto2 == "Dormir")
+            if (ataqueRecibido.estadoEfectuado == "Dormir")
             {
                 estado = "Dormido";
             }
-            if (ataqueRecibido.efecto1 == "Paralizar" || ataqueRecibido.efecto2 == "Paralizar")
+            if (ataqueRecibido.estadoEfectuado == "Paralizar")
             {
                 estado = "Paralizado";
             }
-            if (ataqueRecibido.efecto1 == "Confundir" || ataqueRecibido.efecto2 == "Confundir")
+            if (ataqueRecibido.estadoEfectuado == "Confundir")
             {
                 estado = "Confundido";
             }
@@ -101,15 +101,15 @@ namespace Project_7
             {
                 ataque = ataque + 15;
             }
-            if (ataques[ataqueElegido].efecto1 == "Dormir Activo" || ataques[ataqueElegido].efecto2 == "Dormir Activo")
+            if (ataques[ataqueElegido].estadoEfectuado == "Dormir Activo")
             {
                 estado = "Dormido";
             }
-            if (ataques[ataqueElegido].efecto1 == "Paralizar Activo" || ataques[ataqueElegido].efecto2 == "Paralizar Activo")
+            if (ataques[ataqueElegido].estadoEfectuado == "Paralizar Activo")
             {
                 estado = "Paralizado";
             }
-            if (ataques[ataqueElegido].estadoEfectuado == "Confundir Activo" || ataques[ataqueElegido].efecto2 == "Confundir Activo")
+            if (ataques[ataqueElegido].estadoEfectuado == "Confundir Activo")
             {
                 estado = "Confundido";
             }
