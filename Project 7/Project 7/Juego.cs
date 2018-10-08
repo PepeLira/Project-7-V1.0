@@ -44,7 +44,7 @@ namespace Project_7
             
         }
         
-        public void CrearBitmons()
+        void CrearBitmons()
         {
             bitmons.Add(new RobinWilliams());
             bitmons.Add(new Brad_Pitt());
@@ -57,7 +57,7 @@ namespace Project_7
             bitmons.Add(new Leonardo_Dicaprio());
             bitmons.Add(new JackNicholson());
         }
-        public void CrearJugadores()
+        void CrearJugadores()
         {
             Console.WriteLine("Jugador 1");
             string nombre1 = Consola.PedirNombre();
@@ -66,7 +66,7 @@ namespace Project_7
             string nombre2 = Consola.PedirNombre();
             jugador2 = new Jugador(nombre2);
         }
-        public void DesplegarBitmons()
+        void DesplegarBitmons()
         {
             int count = 1;
             foreach (Bitmon bitmon in bitmons)
@@ -82,7 +82,7 @@ namespace Project_7
                 count += 1;
             }
         }
-        public void AsignarBitmons()
+        void AsignarBitmons()
         {
             Console.WriteLine("Turno de {0} de elegir:",jugador1.nombre);
             jugador1.AgregarBitmon(0, bitmons[Consola.ElegirBitmon(bitmons) - 1]);

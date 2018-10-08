@@ -79,72 +79,80 @@ namespace Project_7
 
         public Ataque atacar(int ataqueElegido)//Atacar ademas de retornar el ataque que afecta al bitmon contrario, aplica los efectos al bitmon atacante si es que los hay.
         {
-            Console.WriteLine("{0} ha usado {1}.", nombre,ataques[ataqueElegido].nombre);
-            Console.ReadLine();
-            if ((ataques[ataqueElegido].potencia > 0) && ((ataques[ataqueElegido].efecto1 == "Disminuir Hp Activo" || ataques[ataqueElegido].efecto2 == "Disminuir Hp Activo")) && (ataques[ataqueElegido].nombre == "Suuupeeermaaan" || ataques[ataqueElegido].nombre == "Alien Queen"))
+            if (ataques[ataqueElegido].coste > Estamina)
             {
-                hp = 0;
+                Console.WriteLine("{0} no ha podido usar {1} por falta de estamina. {0} necesita descansar.", nombre, ataques[ataqueElegido].nombre);
+                return null;
             }
-            if (ataques[ataqueElegido].efecto1 == "Disminuir Defensa Activo" || ataques[ataqueElegido].efecto2 == "Disminuir Defensa Activo")
+            else
             {
-                Console.WriteLine("La defensa de {0} ha bajado.", nombre);
+                Console.WriteLine("{0} ha usado {1}.", nombre, ataques[ataqueElegido].nombre);
                 Console.ReadLine();
-                defensa = defensa - 15;
-            }
-            if (ataques[ataqueElegido].efecto1 == "Disminuir Velocidad Activo" || ataques[ataqueElegido].efecto2 == "Disminuir Velocidad Activo")
-            {
-                Console.WriteLine("La velocidad de {0} ha bajado.", nombre);
-                Console.ReadLine();
-                velocidad = velocidad - 15;
-            }
-            if (ataques[ataqueElegido].efecto1 == "Disminuir Ataque Activo" || ataques[ataqueElegido].efecto2 == "Disminuir Ataque Activo")
-            {
-                ataque = ataque - 15;
-                Console.WriteLine("El ataque de {0} ha bajado.", nombre);
-                Console.ReadLine();
-            }
-            if (ataques[ataqueElegido].efecto1 == "Aumentar Hp Activo" || ataques[ataqueElegido].efecto2 == "Aumentar Hp Activo")
-            {
-                Console.WriteLine("{0} se ha curado.", nombre);
-                Console.ReadLine();
-                hp = hp + 20;
-                if (hp >= hpInicial)
+                if ((ataques[ataqueElegido].potencia > 0) && ((ataques[ataqueElegido].efecto1 == "Disminuir Hp Activo" || ataques[ataqueElegido].efecto2 == "Disminuir Hp Activo")) && (ataques[ataqueElegido].nombre == "Suuupeeermaaan" || ataques[ataqueElegido].nombre == "Alien Queen"))
                 {
-                    hp = hpInicial;
+                    hp = 0;
                 }
+                if (ataques[ataqueElegido].efecto1 == "Disminuir Defensa Activo" || ataques[ataqueElegido].efecto2 == "Disminuir Defensa Activo")
+                {
+                    Console.WriteLine("La defensa de {0} ha bajado.", nombre);
+                    Console.ReadLine();
+                    defensa = defensa - 15;
+                }
+                if (ataques[ataqueElegido].efecto1 == "Disminuir Velocidad Activo" || ataques[ataqueElegido].efecto2 == "Disminuir Velocidad Activo")
+                {
+                    Console.WriteLine("La velocidad de {0} ha bajado.", nombre);
+                    Console.ReadLine();
+                    velocidad = velocidad - 15;
+                }
+                if (ataques[ataqueElegido].efecto1 == "Disminuir Ataque Activo" || ataques[ataqueElegido].efecto2 == "Disminuir Ataque Activo")
+                {
+                    ataque = ataque - 15;
+                    Console.WriteLine("El ataque de {0} ha bajado.", nombre);
+                    Console.ReadLine();
+                }
+                if (ataques[ataqueElegido].efecto1 == "Aumentar Hp Activo" || ataques[ataqueElegido].efecto2 == "Aumentar Hp Activo")
+                {
+                    Console.WriteLine("{0} se ha curado.", nombre);
+                    Console.ReadLine();
+                    hp = hp + 20;
+                    if (hp >= hpInicial)
+                    {
+                        hp = hpInicial;
+                    }
+                }
+                if (ataques[ataqueElegido].efecto1 == "Aumentar Defensa Activo" || ataques[ataqueElegido].efecto2 == "Aumentar Defensa Activo")
+                {
+                    Console.WriteLine("La defensa de {0} ha aumentado.", nombre);
+                    Console.ReadLine();
+                    defensa = defensa + 15;
+                }
+                if (ataques[ataqueElegido].efecto1 == "Aumentar Velocidad Activo" || ataques[ataqueElegido].efecto2 == "Aumentar Velocidad Activo")
+                {
+                    Console.WriteLine("La velocidad de {0} ha aumentado.", nombre);
+                    Console.ReadLine();
+                    velocidad = velocidad + 15;
+                }
+                if (ataques[ataqueElegido].efecto1 == "Aumentar Ataque Activo" || ataques[ataqueElegido].efecto2 == "Aumentar Ataque Activo")
+                {
+                    Console.WriteLine("El ataque de {0} ha aumentado.", nombre);
+                    Console.ReadLine();
+                    ataque = ataque + 15;
+                }
+                if (ataques[ataqueElegido].estadoEfectuado == "Dormir Activo")
+                {
+                    estado = "Dormido";
+                }
+                if (ataques[ataqueElegido].estadoEfectuado == "Paralizar Activo")
+                {
+                    estado = "Paralizado";
+                }
+                if (ataques[ataqueElegido].estadoEfectuado == "Confundir Activo")
+                {
+                    estado = "Confundido";
+                }
+                Estamina = Estamina - ataques[ataqueElegido].coste;
+                return ataques[ataqueElegido];
             }
-            if (ataques[ataqueElegido].efecto1 == "Aumentar Defensa Activo" || ataques[ataqueElegido].efecto2 == "Aumentar Defensa Activo")
-            {
-                Console.WriteLine("La defensa de {0} ha aumentado.", nombre);
-                Console.ReadLine();
-                defensa = defensa + 15;
-            }
-            if (ataques[ataqueElegido].efecto1 == "Aumentar Velocidad Activo" || ataques[ataqueElegido].efecto2 == "Aumentar Velocidad Activo")
-            {
-                Console.WriteLine("La velocidad de {0} ha aumentado.", nombre);
-                Console.ReadLine();
-                velocidad = velocidad + 15;
-            }
-            if (ataques[ataqueElegido].efecto1 == "Aumentar Ataque Activo" || ataques[ataqueElegido].efecto2 == "Aumentar Ataque Activo")
-            {
-                Console.WriteLine("El ataque de {0} ha aumentado.", nombre);
-                Console.ReadLine();
-                ataque = ataque + 15;
-            }
-            if (ataques[ataqueElegido].estadoEfectuado == "Dormir Activo")
-            {
-                estado = "Dormido";
-            }
-            if (ataques[ataqueElegido].estadoEfectuado == "Paralizar Activo")
-            {
-                estado = "Paralizado";
-            }
-            if (ataques[ataqueElegido].estadoEfectuado == "Confundir Activo")
-            {
-                estado = "Confundido";
-            }
-            Estamina = Estamina - ataques[ataqueElegido].coste;
-            return ataques[ataqueElegido];
         }
         public void descansar()//La acción de descansar no infringe daño al bitmon enemigo, pero aumenta la estamina del 
         {                      //bitmon actual y además la defensa.
