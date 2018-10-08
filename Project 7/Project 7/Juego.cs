@@ -11,6 +11,7 @@ namespace Project_7
         private Jugador jugador1;
         private Jugador jugador2;
         private List<Bitmon> bitmons = new List<Bitmon>();
+        private Consola consola = new Consola();
         
         public Juego()
         {
@@ -107,7 +108,8 @@ namespace Project_7
         public void Batalla()
         {
             Batalla batalla = new Batalla();
-            batalla.iniciarBatalla(jugador1, jugador2);
+            Jugador jugadorGanador = batalla.iniciarBatalla(jugador1, jugador2);
+            consola.pantallaGanador(jugadorGanador);
         }
     }
 }

@@ -108,6 +108,42 @@ namespace Project_7
             }
         }
 
+
+        List<Jugador> JugadorMasRapido(Jugador jugador1, Jugador jugador2)
+        {
+            List<Jugador> actoresEnContienda = new List<Jugador>();
+            if (jugador1.BitmonActivo.velocidad > jugador2.BitmonActivo.velocidad)
+            {
+                actoresEnContienda.Add(jugador1);
+                actoresEnContienda.Add(jugador2);
+                return actoresEnContienda;
+            }
+            else if (jugador1.BitmonActivo.velocidad < jugador2.BitmonActivo.velocidad)
+            {
+                actoresEnContienda.Add(jugador1);
+                actoresEnContienda.Add(jugador2);
+                return actoresEnContienda;
+            }
+            else
+            {
+                int selector = rnd.Next(0, 101);
+
+                if (selector < 50)
+                {
+                    actoresEnContienda.Add(jugador1);
+                    actoresEnContienda.Add(jugador2);
+                    return actoresEnContienda;
+                }
+                else
+                {
+                    actoresEnContienda.Add(jugador1);
+                    actoresEnContienda.Add(jugador2);
+                    return actoresEnContienda;
+                }
+            }
+        }
+
+
         public Jugador iniciarBatalla(Jugador jugador1, Jugador jugador2)
         {
 
@@ -126,50 +162,17 @@ namespace Project_7
 
                 //Bitmons ejecutan acciones Pepe cosas: tiene que haber un metodo mejor para hacer esto, arreglado esto todo funcionaría perfecto
 
-                int i = 0;
-                while ( i < 2)
+                List<Jugador> velocidadJugadores = JugadorMasRapido(jugador1, jugador2);
+
+                bitmonEscuchanInstruccion(velocidadJugadores[0], velocidadJugadores[1]);
+                if (revisarEstado(velocidadJugadores[0], velocidadJugadores[1]) != null)
                 {
-                    if (jugador1.BitmonActivo.velocidad > jugador2.BitmonActivo.velocidad && i == 0)
-                    {
-                        bitmonEscuchanInstruccion(jugador1,jugador2);
-                        if (revisarEstado(jugador1, jugador2) != null)
-                        {
-                            jugadorGanador = revisarEstado(jugador1, jugador2);
-                            break;
-                        }
-                    }
-                    else if (jugador2.BitmonActivo.velocidad >= jugador1.BitmonActivo.velocidad && i == 0)
-                    {
-                        bitmonEscuchanInstruccion(jugador2,jugador1);
-                        if (revisarEstado(jugador1, jugador2) != null)
-                        {
-                            jugadorGanador = revisarEstado(jugador1, jugador2);
-                            break;
-                        }
-                    }
-                    
-
-                    if (jugador1.BitmonActivo.velocidad < jugador2.BitmonActivo.velocidad && i == 1)
-                    {
-                        bitmonEscuchanInstruccion(jugador2,jugador1);
-                        if (revisarEstado(jugador1, jugador2) != null)
-                        {
-                            jugadorGanador = revisarEstado(jugador1, jugador2);
-                            break;
-                        }
-                    }
-                    else if (jugador2.BitmonActivo.velocidad <= jugador1.BitmonActivo.velocidad && i == 1)
-                    {
-                        bitmonEscuchanInstruccion(jugador1,jugador2);
-                        if (revisarEstado(jugador1, jugador2) != null)
-                        {
-                            jugadorGanador = revisarEstado(jugador1, jugador2);
-                            break;
-                        }
-                    }
-                    
-
-                    i += 1;
+                    jugadorGanador = revisarEstado(velocidadJugadores[0], velocidadJugadores[1]);
+                }
+                bitmonEscuchanInstruccion(velocidadJugadores[1], velocidadJugadores[0]);
+                if (revisarEstado(velocidadJugadores[1], velocidadJugadores[0]) != null)
+                {
+                    jugadorGanador = revisarEstado(velocidadJugadores[1], velocidadJugadores[0]);
                 }
                 if (jugadorGanador != null)
                 {

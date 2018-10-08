@@ -83,7 +83,10 @@ namespace Project_7
         {
             while (true)
             {
-                int bitmonElegido = consola.elegirBitmon(bitmons, nombre);
+                int bitmonElegido;
+                
+                
+
 
                 int cont = 0;
 
@@ -101,15 +104,30 @@ namespace Project_7
                     break;
                 }
 
-                else if (bitmons[bitmonElegido] == BitmonActivo || bitmons[bitmonElegido].hp == 0)
-                {
-                    Console.WriteLine("Actor activo o derrotado, elige otro!");
-                }
+                
                 else
                 {
-                    jugadaTurno = "cambiar actor";
-                    CambiarBitmon(bitmonElegido);
-                    break;
+                    if (estadoJugador != "Derrotado")
+                    {
+                        while (true)
+                        {
+                            bitmonElegido = consola.elegirBitmon(bitmons, nombre);
+                            if (bitmons[bitmonElegido] == BitmonActivo || bitmons[bitmonElegido].hp == 0)
+                            {
+                                Console.WriteLine("Actor activo o derrotado, elige otro!");
+                            }
+                            else if (bitmonElegido == 0 || bitmonElegido == 1 || bitmonElegido == 2)
+                            {
+                                break;
+                            }
+
+
+                        }
+                        jugadaTurno = "cambiar actor";
+                        CambiarBitmon(bitmonElegido);
+                        break;
+                    }
+                    
                 }
 
             }
