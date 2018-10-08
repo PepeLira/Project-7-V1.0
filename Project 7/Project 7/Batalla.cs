@@ -64,8 +64,14 @@ namespace Project_7
 
         Jugador revisarEstado(Jugador jugadorAtacante, Jugador jugadorAgredido)
         {
-            jugadorAgredido.BitmonDerrotado();
-            jugadorAtacante.BitmonDerrotado();
+            if(jugadorAtacante.BitmonActivo.hp <= 0)
+            {
+                jugadorAtacante.BitmonDerrotado();
+            }
+            else if (jugadorAgredido.BitmonActivo.hp <= 0)
+            {
+                jugadorAgredido.BitmonDerrotado();
+            }
 
             if (jugadorAgredido.estadoJugador == "Derrotado")
             {

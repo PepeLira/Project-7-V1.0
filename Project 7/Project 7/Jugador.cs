@@ -105,6 +105,7 @@ namespace Project_7
                 }
                 else
                 {
+                    
                     CambiarBitmon(bitmonElegido);
                     break;
                 }

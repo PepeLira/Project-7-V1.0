@@ -118,6 +118,7 @@ namespace Project_7
                             {
                                 Console.WriteLine("{0} no es una eleccion valida.", resp);
                                 continue;
+
                             }
                         }
                         
@@ -137,6 +138,7 @@ namespace Project_7
                 }
             }
         }
+
         public int elegirAtaque(List<Ataque> ataquesBitmonActivo,string nombreJugador)
         {
             int cont = 0;
@@ -185,7 +187,8 @@ namespace Project_7
                 }
             }
         }
-        public int elegirBitmon(Bitmon[] bitmons,string nombreJugador)
+        
+public int elegirBitmon(Bitmon[] bitmons,string nombreJugador)
         {
             for (int i = 0; i < bitmons.Length ; i+=1)
             {
