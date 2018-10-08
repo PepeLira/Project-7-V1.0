@@ -88,6 +88,8 @@ namespace Project_7
 
             while(true)
             {
+                Jugador.GuardarJugador1(jugador1);
+                Jugador.GuardarJugador2(jugador2);
                 consola.MostrarBitmonActivo(jugadorActivo.BitmonActivo);
                 turno();
                 turnoDelSiguienteJugador(jugador1, jugador2);

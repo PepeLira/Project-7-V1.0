@@ -145,19 +145,37 @@ namespace Project_7
             }
         }
 
-        public void GuardarJugador1(Juego jugador)
+        public static void GuardarJugador1(Jugador jugador)
         {
             Stream stream = File.Open("Jugador1.dat", FileMode.Create);
             BinaryFormatter bf = new BinaryFormatter();
             bf.Serialize(stream, jugador);
             stream.Close();
         }
-        public void GuardarJugador2(Juego jugador)
+        public static void GuardarJugador2(Jugador jugador)
         {
             Stream stream = File.Open("Jugador2.dat", FileMode.Create);
             BinaryFormatter bf = new BinaryFormatter();
             bf.Serialize(stream, jugador);
             stream.Close();
+        }
+        public static Jugador RecuperarJugador1()
+        {
+            Jugador jugador;
+            Stream stream = File.Open("Jugador1.dat", FileMode.Open);
+            BinaryFormatter bf = new BinaryFormatter();
+            jugador = (Jugador)bf.Deserialize(stream);
+            stream.Close();
+            return jugador;
+        }
+        public static Jugador RecuperarJugador2()
+        {
+            Jugador jugador;
+            Stream stream = File.Open("Jugador2.dat", FileMode.Open);
+            BinaryFormatter bf = new BinaryFormatter();
+            jugador = (Jugador)bf.Deserialize(stream);
+            stream.Close();
+            return jugador;
         }
 
         public void GetObjectData(SerializationInfo info, StreamingContext context)

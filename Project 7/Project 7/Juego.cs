@@ -3,15 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Runtime.Serialization;
-using System.Runtime.Serialization.Formatters.Binary;
-using System.IO;
-using System.Xml.Serialization;
 
 namespace Project_7
 {
-    [Serializable()]
-    class Juego: ISerializable
+    class Juego
     {
         private Jugador jugador1;
         private Jugador jugador2;
@@ -19,11 +14,33 @@ namespace Project_7
         
         public Juego()
         {
-            CrearBitmons();
-            CrearJugadores();
-            DesplegarBitmons();
-            AsignarBitmons();
-            Console.Clear();
+            while (true)
+            {
+                Console.WriteLine("Quieres reanudar un juego gurdado?(y/n)");
+                string resp = Console.ReadLine();
+                if (resp == "s" || resp == "y" || resp == "si" || resp == "yes")
+                {
+                    CrearBitmons();
+                    jugador1 = Jugador.RecuperarJugador1();
+                    jugador2 = Jugador.RecuperarJugador2();
+                    break;
+                }
+                else if (resp == "n" || resp == "no")
+                {
+                    CrearBitmons();
+                    CrearJugadores();
+                    DesplegarBitmons();
+                    AsignarBitmons();
+                    Console.Clear();
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("{0} no es una eleccion valida.", resp);
+                    continue;
+                }
+            }
+            
         }
         
         public void CrearBitmons()
@@ -55,11 +72,11 @@ namespace Project_7
             {
                 Console.WriteLine("({0})", count);
                 Console.WriteLine(bitmon.nombre);
-                Console.WriteLine("Tipo:{0}", bitmon.tipo);
-                Console.WriteLine("HP:{0}", bitmon.hp);
-                Console.WriteLine("Estamina:{0}", bitmon.Estamina);
-                Console.WriteLine("Ataque:{0}", bitmon.ataque);
-                Console.WriteLine("Defensa:{0}", bitmon.defensa);
+                Console.WriteLine("Tipo: {0}", bitmon.tipo);
+                Console.WriteLine("HP: {0}", bitmon.hp);
+                Console.WriteLine("Estamina: {0}", bitmon.Estamina);
+                Console.WriteLine("Ataque: {0}", bitmon.ataque);
+                Console.WriteLine("Defensa: {0}", bitmon.defensa);
                 Console.WriteLine("======================================");
                 count += 1;
             }
@@ -91,36 +108,6 @@ namespace Project_7
         {
             Batalla batalla = new Batalla();
             batalla.iniciarBatalla(jugador1, jugador2);
-        }
-
-        public void GuardarJuego(Juego juego)
-        {
-            Stream stream = File.Open("JuegoGuardado.dat", FileMode.Create);
-            BinaryFormatter bf = new BinaryFormatter();
-            bf.Serialize(stream, juego);
-            stream.Close();
-        }
-
-        public Juego RecuperarJuego()
-        {
-            Juego juego;
-            Stream stream = File.Open("JuegoGuardado.dat", FileMode.Open);
-            BinaryFormatter bf = new BinaryFormatter();
-            juego = (Juego)bf.Deserialize(stream);
-            stream.Close();
-            return juego;
-        }
-
-        public void GetObjectData(SerializationInfo info, StreamingContext context)
-        {
-            info.AddValue("Jugador1", jugador1);
-            info.AddValue("Jugador2", jugador2);
-        }
-
-        public Juego(SerializationInfo info, StreamingContext context)
-        {
-            jugador1 = (Jugador)info.GetValue("Jugador1", typeof(Jugador));
-            jugador2 = (Jugador)info.GetValue("Jugador2",typeof(Jugador));
         }
     }
 }
