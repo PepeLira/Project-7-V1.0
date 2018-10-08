@@ -11,11 +11,11 @@ namespace Project_7
         Consola consola = new Consola();
         Jugador jugadorActivo;
         Jugador jugadorGanador;
-        
+        Random rnd = new Random();
 
         void elegirJugadorInicial(Jugador jugador1, Jugador jugador2) //elegir el jugador inicial con un random de 0 a 90, 50/50 de proba
         {
-            Random rnd = new Random();
+            
             int selector = rnd.Next(0, 101);
 
             if (selector < 50)
@@ -120,6 +120,30 @@ namespace Project_7
                             break;
                         }
                     }
+                    else if (jugador2.BitmonActivo.velocidad == jugador1.BitmonActivo.velocidad && i == 0)
+                    {
+                        int selector = rnd.Next(0, 101);
+
+                        if (selector < 50)
+                        {
+                            bitmonEscuchanInstruccion(jugador1, jugador2);
+                            if (revisarEstado(jugador1, jugador2) != null)
+                            {
+                                jugadorGanador = revisarEstado(jugador1, jugador2);
+                                break;
+                            }
+                        }
+                        else
+                        {
+                            bitmonEscuchanInstruccion(jugador2, jugador1);
+                            if (revisarEstado(jugador1, jugador2) != null)
+                            {
+                                jugadorGanador = revisarEstado(jugador1, jugador2);
+                                break;
+                            }
+                        }
+                    }
+
                     if (jugador1.BitmonActivo.velocidad > jugador2.BitmonActivo.velocidad && i == 1)
                     {
                         bitmonEscuchanInstruccion(jugador2,jugador1);
@@ -136,6 +160,29 @@ namespace Project_7
                         {
                             jugadorGanador = revisarEstado(jugador1, jugador2);
                             break;
+                        }
+                    }
+                    else if (jugador2.BitmonActivo.velocidad == jugador1.BitmonActivo.velocidad && i == 1)
+                    {
+                        int selector = rnd.Next(0, 101);
+
+                        if (selector < 50)
+                        {
+                            bitmonEscuchanInstruccion(jugador1, jugador2);
+                            if (revisarEstado(jugador1, jugador2) != null)
+                            {
+                                jugadorGanador = revisarEstado(jugador1, jugador2);
+                                break;
+                            }
+                        }
+                        else
+                        {
+                            bitmonEscuchanInstruccion(jugador2, jugador1);
+                            if (revisarEstado(jugador1, jugador2) != null)
+                            {
+                                jugadorGanador = revisarEstado(jugador1, jugador2);
+                                break;
+                            }
                         }
                     }
 
