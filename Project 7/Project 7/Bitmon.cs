@@ -11,6 +11,7 @@ namespace Project_7
     {
         public string nombre { get; set; }
         public int hp { get; set; }
+        public int hpInicial { get; set; }
         public int Estamina { get; set; }
         public int ataque { get; set; }
         public int defensa { get; set; }
@@ -79,6 +80,14 @@ namespace Project_7
             if (ataques[ataqueElegido].efecto1 == "Disminuir Ataque Activo" || ataques[ataqueElegido].efecto2 == "Disminuir Ataque Activo")
             {
                 ataque = ataque - 15;
+            }
+            if (ataques[ataqueElegido].efecto1 == "Aumentar Hp Activo" || ataques[ataqueElegido].efecto2 == "Aumentar Hp Activo")
+            {
+                hp = hp + 20;
+                if (hp >= hpInicial)
+                {
+                    hp = hpInicial;
+                }
             }
             if (ataques[ataqueElegido].efecto1 == "Aumentar Defensa Activo" || ataques[ataqueElegido].efecto2 == "Aumentar Defensa Activo")
             {

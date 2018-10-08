@@ -13,6 +13,7 @@ namespace Project_7
         {
             nombre = "Jim Carrey";
             hp = 50;
+            hpInicial = 50;
             Estamina = 100;
             ataque = 50;
             defensa = 50;

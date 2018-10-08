@@ -13,6 +13,7 @@ namespace Project_7
         {
             nombre = "Robin Williams";
             hp = 50;
+            hpInicial = 50;
             Estamina = 100;
             ataque = 50;
             defensa = 50;
