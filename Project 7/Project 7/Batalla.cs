@@ -96,10 +96,10 @@ namespace Project_7
             {
                 Jugador.GuardarJugador1(jugador1);
                 Jugador.GuardarJugador2(jugador2);
-                consola.MostrarBitmonActivo(jugadorActivo.BitmonActivo);
+                consola.MostrarBitmonsActivos(jugador1,jugador2);
                 turno();
                 turnoDelSiguienteJugador(jugador1, jugador2);
-                consola.MostrarBitmonActivo(jugadorActivo.BitmonActivo);
+                consola.MostrarBitmonsActivos(jugador1, jugador2);
                 turno();
                 turnoDelSiguienteJugador(jugador1, jugador2);
 

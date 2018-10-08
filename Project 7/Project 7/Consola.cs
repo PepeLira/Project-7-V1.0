@@ -251,26 +251,46 @@ public int elegirBitmon(Bitmon[] bitmons,string nombreJugador)
             }
             
         }
-        public void MostrarBitmonActivo(Bitmon bitmonActivo)
+        public void MostrarBitmonsActivos(Jugador jugador1, Jugador jugador2)
         {
             System.Console.Clear();
-            Console.WriteLine("===================Actor en Escena ================");
-            Console.WriteLine("Nombre Actor: {0}", bitmonActivo.nombre);
+            Console.WriteLine("=================== Actores Nominados ================");
+            Console.WriteLine("Pelicula de {0}", jugador1.nombre);
+            Console.WriteLine("Nombre Actor: {0}", jugador1.BitmonActivo.nombre);
             Console.WriteLine("  ==========================================");
-            Console.WriteLine("  | Tipo | {0}", bitmonActivo.tipo);
+            Console.WriteLine("  | Tipo | {0}", jugador1.BitmonActivo.tipo);
             Console.WriteLine("  ==========================================");
-            Console.WriteLine("  | HP | {0}", bitmonActivo.hp);
+            Console.WriteLine("  | HP | {0}", jugador1.BitmonActivo.hp);
             Console.WriteLine("  ==========================================");
-            Console.WriteLine("  | Estamina | {0}", bitmonActivo.Estamina);
+            Console.WriteLine("  | Estamina | {0}", jugador1.BitmonActivo.Estamina);
             Console.WriteLine("  ==========================================");
-            Console.WriteLine("  | Ataque | {0}", bitmonActivo.ataque);
+            Console.WriteLine("  | Ataque | {0}", jugador1.BitmonActivo.ataque);
             Console.WriteLine("  ==========================================");
-            Console.WriteLine("  | Defensa | {0}", bitmonActivo.defensa);
+            Console.WriteLine("  | Defensa | {0}", jugador1.BitmonActivo.defensa);
             Console.WriteLine("  ==========================================");
-            Console.WriteLine("  | Velocidad | {0}", bitmonActivo.velocidad);
+            Console.WriteLine("  | Velocidad | {0}", jugador1.BitmonActivo.velocidad);
             Console.WriteLine("  ==========================================");
-            Console.WriteLine("  | Estado | {0}", bitmonActivo.estado);
+            Console.WriteLine("  | Estado | {0}", jugador1.BitmonActivo.estado);
             Console.WriteLine("  ==========================================");
+            Console.WriteLine();
+            Console.WriteLine("Pelicula de {0}", jugador2.nombre);
+            Console.WriteLine("Nombre Actor: {0}", jugador2.BitmonActivo.nombre);
+            Console.WriteLine("  ==========================================");
+            Console.WriteLine("  | Tipo | {0}", jugador2.BitmonActivo.tipo);
+            Console.WriteLine("  ==========================================");
+            Console.WriteLine("  | HP | {0}", jugador2.BitmonActivo.hp);
+            Console.WriteLine("  ==========================================");
+            Console.WriteLine("  | Estamina | {0}", jugador2.BitmonActivo.Estamina);
+            Console.WriteLine("  ==========================================");
+            Console.WriteLine("  | Ataque | {0}", jugador2.BitmonActivo.ataque);
+            Console.WriteLine("  ==========================================");
+            Console.WriteLine("  | Defensa | {0}", jugador2.BitmonActivo.defensa);
+            Console.WriteLine("  ==========================================");
+            Console.WriteLine("  | Velocidad | {0}", jugador2.BitmonActivo.velocidad);
+            Console.WriteLine("  ==========================================");
+            Console.WriteLine("  | Estado | {0}", jugador2.BitmonActivo.estado);
+            Console.WriteLine("  ==========================================");
+            Console.WriteLine();
         }
 
         public static void PantallaInicio()
