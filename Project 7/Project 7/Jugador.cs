@@ -147,17 +147,30 @@ namespace Project_7
 
         public static void GuardarJugador1(Jugador jugador)
         {
-            Stream stream = File.Open("Jugador1.dat", FileMode.Create);
-            BinaryFormatter bf = new BinaryFormatter();
-            bf.Serialize(stream, jugador);
-            stream.Close();
+            try
+            {
+                Stream stream = File.Open("Jugador1.dat", FileMode.Create);
+                BinaryFormatter bf = new BinaryFormatter();
+                bf.Serialize(stream, jugador);
+                stream.Close();
+            }catch (System.IO.FileNotFoundException e)
+            {
+                Console.WriteLine("No hay un juego guardado en la ruta elegida.");
+            }
         }
         public static void GuardarJugador2(Jugador jugador)
         {
-            Stream stream = File.Open("Jugador2.dat", FileMode.Create);
-            BinaryFormatter bf = new BinaryFormatter();
-            bf.Serialize(stream, jugador);
-            stream.Close();
+            try
+            {
+                Stream stream = File.Open("Jugador2.dat", FileMode.Create);
+                BinaryFormatter bf = new BinaryFormatter();
+                bf.Serialize(stream, jugador);
+                stream.Close();
+            }
+            catch (System.IO.FileNotFoundException e)
+            {
+                Console.WriteLine("");
+            }
         }
         public static Jugador RecuperarJugador1()
         {

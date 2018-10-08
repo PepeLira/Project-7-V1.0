@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Project_7
 {
+    [Serializable]
     class Vin_Diesel : Bitmon
     {
         public Vin_Diesel()

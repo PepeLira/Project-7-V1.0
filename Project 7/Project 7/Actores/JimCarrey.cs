@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Project_7
 {
+    [Serializable]
     class JimCarrey:Bitmon
     {
         public JimCarrey()
