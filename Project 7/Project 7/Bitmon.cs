@@ -26,26 +26,38 @@ namespace Project_7
         {
             if (ataqueRecibido.efecto1 == "Disminuir Defensa Oponente" || ataqueRecibido.efecto2 == "Disminuir Defensa Oponente")
             {
+                Console.WriteLine("La defensa de {0} ha bajado.", nombre);
+                Console.ReadLine();
                 defensa = defensa - 15;
             }
             if (ataqueRecibido.efecto1 == "Disminuir Velocidad Oponente" || ataqueRecibido.efecto2 == "Disminuir Velocidad Oponente")
             {
+                Console.WriteLine("La velocidad de {0} ha bajado.", nombre);
+                Console.ReadLine();
                 velocidad = velocidad - 15;
             }
             if (ataqueRecibido.efecto1 == "Disminuir Ataque Oponente" || ataqueRecibido.efecto2 == "Disminuir Ataque Oponente")
             {
+                Console.WriteLine("El ataque de {0} ha bajado.", nombre);
+                Console.ReadLine();
                 ataque = ataque - 15;
             }
             if (ataqueRecibido.estadoEfectuado == "Dormir")
             {
+                Console.WriteLine("{0} se ha dormido, quizas no despierte.", nombre);
+                Console.ReadLine();
                 estado = "Dormido";
             }
             if (ataqueRecibido.estadoEfectuado == "Paralizar")
             {
+                Console.WriteLine("{0} ha sido paralizado, quizas no ataque.", nombre);
+                Console.ReadLine();
                 estado = "Paralizado";
             }
             if (ataqueRecibido.estadoEfectuado == "Confundir")
             {
+                Console.WriteLine("{0} esta confundido.", nombre);
+                Console.ReadLine();
                 estado = "Confundido";
             }
             if ((ataqueRecibido.potencia > 0) && (ataqueRecibido.efecto1 == "Disminuir Hp Oponente" || ataqueRecibido.efecto2 == "Disminuir Hp Oponente"))
@@ -55,6 +67,8 @@ namespace Project_7
                 hp = hp - (((ataqueRecibido.potencia + (bitmonAgresor.ataque / 10)) * Batalla.MultiplicadorTipo(ataqueRecibido.tipo, tipo)) / (defensa / 15));
                 if (hp <= 0)
                 {
+                    Console.WriteLine("{0} ha sido derrotado.", nombre);
+                    Console.ReadLine();
                     hp = 0;
                     estado = "Derrotado";
                 }
@@ -65,24 +79,34 @@ namespace Project_7
 
         public Ataque atacar(int ataqueElegido)//Atacar ademas de retornar el ataque que afecta al bitmon contrario, aplica los efectos al bitmon atacante si es que los hay.
         {
+            Console.WriteLine("{0} ha usado {1}.", nombre,ataques[ataqueElegido].nombre);
+            Console.ReadLine();
             if ((ataques[ataqueElegido].potencia > 0) && ((ataques[ataqueElegido].efecto1 == "Disminuir Hp Activo" || ataques[ataqueElegido].efecto2 == "Disminuir Hp Activo")) && (ataques[ataqueElegido].nombre == "Suuupeeermaaan" || ataques[ataqueElegido].nombre == "Alien Queen"))
             {
                 hp = 0;
             }
             if (ataques[ataqueElegido].efecto1 == "Disminuir Defensa Activo" || ataques[ataqueElegido].efecto2 == "Disminuir Defensa Activo")
             {
+                Console.WriteLine("La defensa de {0} ha bajado.", nombre);
+                Console.ReadLine();
                 defensa = defensa - 15;
             }
             if (ataques[ataqueElegido].efecto1 == "Disminuir Velocidad Activo" || ataques[ataqueElegido].efecto2 == "Disminuir Velocidad Activo")
             {
+                Console.WriteLine("La velocidad de {0} ha bajado.", nombre);
+                Console.ReadLine();
                 velocidad = velocidad - 15;
             }
             if (ataques[ataqueElegido].efecto1 == "Disminuir Ataque Activo" || ataques[ataqueElegido].efecto2 == "Disminuir Ataque Activo")
             {
                 ataque = ataque - 15;
+                Console.WriteLine("El ataque de {0} ha bajado.", nombre);
+                Console.ReadLine();
             }
             if (ataques[ataqueElegido].efecto1 == "Aumentar Hp Activo" || ataques[ataqueElegido].efecto2 == "Aumentar Hp Activo")
             {
+                Console.WriteLine("{0} se ha curado.", nombre);
+                Console.ReadLine();
                 hp = hp + 20;
                 if (hp >= hpInicial)
                 {
@@ -91,14 +115,20 @@ namespace Project_7
             }
             if (ataques[ataqueElegido].efecto1 == "Aumentar Defensa Activo" || ataques[ataqueElegido].efecto2 == "Aumentar Defensa Activo")
             {
+                Console.WriteLine("La defensa de {0} ha aumentado.", nombre);
+                Console.ReadLine();
                 defensa = defensa + 15;
             }
             if (ataques[ataqueElegido].efecto1 == "Aumentar Velocidad Activo" || ataques[ataqueElegido].efecto2 == "Aumentar Velocidad Activo")
             {
+                Console.WriteLine("La velocidad de {0} ha aumentado.", nombre);
+                Console.ReadLine();
                 velocidad = velocidad + 15;
             }
             if (ataques[ataqueElegido].efecto1 == "Aumentar Ataque Activo" || ataques[ataqueElegido].efecto2 == "Aumentar Ataque Activo")
             {
+                Console.WriteLine("El ataque de {0} ha aumentado.", nombre);
+                Console.ReadLine();
                 ataque = ataque + 15;
             }
             if (ataques[ataqueElegido].estadoEfectuado == "Dormir Activo")
@@ -113,6 +143,7 @@ namespace Project_7
             {
                 estado = "Confundido";
             }
+            Estamina = Estamina - ataques[ataqueElegido].coste;
             return ataques[ataqueElegido];
         }
         public void descansar()//La acción de descansar no infringe daño al bitmon enemigo, pero aumenta la estamina del 
