@@ -22,7 +22,7 @@ namespace Project_7
             tipo = "Suspenso";
             ataques.Add(new Ataque("Whats in the Box", 60, 20, "Suspenso", 1, "Disminuir Hp Oponente", " ", " "));
             ataques.Add(new Ataque("Aquiles Strenght", 0, 20, "Drama", 1, "Aumentar Ataque Activo", " ", " "));
-            ataques.Add(new Ataque("Crazy Monkey", 30, 20, "Suspenso", 1, "Disminuir Hp Oponente", "Aumentar Velocidad Activo ", " "));
+            ataques.Add(new Ataque("Crazy Monkey", 30, 20, "Suspenso", 1, "Disminuir Hp Oponente", "Aumentar Velocidad Activo", " "));
             ataques.Add(new Ataque("Reverse Growth", 0, 20, "Drama", 1, "Aumentar Hp Activo", " ", " "));
         }
     }
