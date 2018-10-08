@@ -49,6 +49,8 @@ namespace Project_7
             }
             if ((ataqueRecibido.potencia > 0) && (ataqueRecibido.efecto1 == "Disminuir Hp Oponente" || ataqueRecibido.efecto2 == "Disminuir Hp Oponente"))
             {
+                Console.WriteLine("{0} recibe {1} de daño.",nombre,(((ataqueRecibido.potencia + (bitmonAgresor.ataque / 10)) * Batalla.MultiplicadorTipo(ataqueRecibido.tipo, tipo)) / (defensa / 15)));
+                Console.ReadLine();
                 hp = hp - (((ataqueRecibido.potencia + (bitmonAgresor.ataque / 10)) * Batalla.MultiplicadorTipo(ataqueRecibido.tipo, tipo)) / (defensa / 15));
                 if (hp <= 0)
                 {

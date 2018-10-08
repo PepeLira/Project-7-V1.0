@@ -19,6 +19,7 @@ namespace Project_7
         public Bitmon BitmonActivo { get; set; }
         public string jugadaTurno { get; set; }
         public int ataqueElegido;
+        public int bitmonElegido;
         public string estadoJugador = "en combate";
 
         public Jugador(string nombre)
@@ -95,6 +96,7 @@ namespace Project_7
                 }
                 if (cont == 3)
                 {
+                    
                     estadoJugador = "Derrotado";
                     break;
                 }
@@ -105,7 +107,7 @@ namespace Project_7
                 }
                 else
                 {
-                    
+                    jugadaTurno = "cambiar actor";
                     CambiarBitmon(bitmonElegido);
                     break;
                 }
@@ -115,11 +117,13 @@ namespace Project_7
 
 
         public void jugada(int ordenRecibida) // recibir la desicion tomada por el jugador por medio de la Consola
-        {
+        { 
             if(ordenRecibida == 0) //elegir ataque
             {
                 jugadaTurno = "atacar";
-                ataqueElegido = consola.elegirAtaque(BitmonActivo.ataques,nombre); 
+
+                ataqueElegido = consola.elegirAtaque(BitmonActivo.ataques, nombre);
+
             }
             else if (ordenRecibida == 1) //descansar
             {
@@ -132,6 +136,10 @@ namespace Project_7
                 while (true)
                 {
                     int bitmonElegido = consola.elegirBitmon(bitmons,nombre);
+                    if (bitmonElegido == 9)
+                    {
+                        break;
+                    }
                     if (bitmons[bitmonElegido] == BitmonActivo)
                     {
                         Console.WriteLine("Actor activo, elige otro!");

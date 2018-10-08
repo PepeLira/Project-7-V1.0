@@ -30,7 +30,28 @@ namespace Project_7
 
         void turno()
         {
-            jugadorActivo.jugada(consola.preguntarAccionTurno(jugadorActivo.nombre)); // Pregunta que accion tomara en su turno
+            jugadorActivo.ataqueElegido = default(int);
+            jugadorActivo.bitmonElegido = default(int);
+            while (true)
+            {
+                jugadorActivo.ataqueElegido = default(int);
+                jugadorActivo.bitmonElegido = default(int);
+                int accion = consola.preguntarAccionTurno(jugadorActivo.nombre);
+                jugadorActivo.jugada(accion); // Pregunta que accion tomara en su turno
+                if (jugadorActivo.jugadaTurno == "atacar" && jugadorActivo.ataqueElegido != 9)
+                {
+                    break;
+                }
+                else if (jugadorActivo.jugadaTurno == "cambiar actor" && jugadorActivo.bitmonElegido != 9)
+                {
+                    break;
+                }
+                else if (accion == 1)
+                {
+                    break;
+                }
+            }
+            
 
         }
 
@@ -103,7 +124,7 @@ namespace Project_7
                 turno();
                 turnoDelSiguienteJugador(jugador1, jugador2);
 
-                //Bitmons ejecutan acciones
+                //Bitmons ejecutan acciones Pepe cosas: tiene que haber un metodo mejor para hacer esto, arreglado esto todo funcionaría perfecto
 
                 int i = 0;
                 while ( i < 2)
@@ -117,7 +138,7 @@ namespace Project_7
                             break;
                         }
                     }
-                    else if (jugador2.BitmonActivo.velocidad > jugador1.BitmonActivo.velocidad && i == 0)
+                    else if (jugador2.BitmonActivo.velocidad >= jugador1.BitmonActivo.velocidad && i == 0)
                     {
                         bitmonEscuchanInstruccion(jugador2,jugador1);
                         if (revisarEstado(jugador1, jugador2) != null)
@@ -126,31 +147,9 @@ namespace Project_7
                             break;
                         }
                     }
-                    else if (jugador2.BitmonActivo.velocidad == jugador1.BitmonActivo.velocidad && i == 0)
-                    {
-                        int selector = rnd.Next(0, 101);
+                    
 
-                        if (selector < 50)
-                        {
-                            bitmonEscuchanInstruccion(jugador1, jugador2);
-                            if (revisarEstado(jugador1, jugador2) != null)
-                            {
-                                jugadorGanador = revisarEstado(jugador1, jugador2);
-                                break;
-                            }
-                        }
-                        else
-                        {
-                            bitmonEscuchanInstruccion(jugador2, jugador1);
-                            if (revisarEstado(jugador1, jugador2) != null)
-                            {
-                                jugadorGanador = revisarEstado(jugador1, jugador2);
-                                break;
-                            }
-                        }
-                    }
-
-                    if (jugador1.BitmonActivo.velocidad > jugador2.BitmonActivo.velocidad && i == 1)
+                    if (jugador1.BitmonActivo.velocidad < jugador2.BitmonActivo.velocidad && i == 1)
                     {
                         bitmonEscuchanInstruccion(jugador2,jugador1);
                         if (revisarEstado(jugador1, jugador2) != null)
@@ -159,7 +158,7 @@ namespace Project_7
                             break;
                         }
                     }
-                    else if (jugador2.BitmonActivo.velocidad > jugador1.BitmonActivo.velocidad && i == 1)
+                    else if (jugador2.BitmonActivo.velocidad <= jugador1.BitmonActivo.velocidad && i == 1)
                     {
                         bitmonEscuchanInstruccion(jugador1,jugador2);
                         if (revisarEstado(jugador1, jugador2) != null)
@@ -168,29 +167,7 @@ namespace Project_7
                             break;
                         }
                     }
-                    else if (jugador2.BitmonActivo.velocidad == jugador1.BitmonActivo.velocidad && i == 1)
-                    {
-                        int selector = rnd.Next(0, 101);
-
-                        if (selector < 50)
-                        {
-                            bitmonEscuchanInstruccion(jugador1, jugador2);
-                            if (revisarEstado(jugador1, jugador2) != null)
-                            {
-                                jugadorGanador = revisarEstado(jugador1, jugador2);
-                                break;
-                            }
-                        }
-                        else
-                        {
-                            bitmonEscuchanInstruccion(jugador2, jugador1);
-                            if (revisarEstado(jugador1, jugador2) != null)
-                            {
-                                jugadorGanador = revisarEstado(jugador1, jugador2);
-                                break;
-                            }
-                        }
-                    }
+                    
 
                     i += 1;
                 }
