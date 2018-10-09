@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project 7", "Project 7\Project 7.csproj", "{DCB68540-29B8-4B25-ADAF-DA2ADB210527}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bin", "Project 7\bin.csproj", "{DCB68540-29B8-4B25-ADAF-DA2ADB210527}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{B98BC9E9-7E7F-467B-BBBF-1D8EA8DEF793}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
